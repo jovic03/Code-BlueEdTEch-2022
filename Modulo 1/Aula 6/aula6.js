@@ -1,7 +1,10 @@
-console.log('Teste');
-
 const prompt = require('prompt-sync')();
 
-let recebeNome = prompt('digite seu nome');
+//revisao While
+let n1 = 0;
 
-console.log(recebeNome);
+while (n1 <5){
+    console.log('é verdadeiro');
+    n1++;
+} 
+
