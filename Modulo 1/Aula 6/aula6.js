@@ -176,6 +176,8 @@ console.log(nomes2[1][0]);
 console.log(nomes2[1][0],nomes2[2][1]);
 */
 
+
+/*
 let alunoNovo = prompt('Digite o nome do(a) aluno(a) novo(a): ')
 
 let nomes = [
@@ -199,3 +201,109 @@ console.log(nomes)
 nomes.indexOf('Joabe Costa')
 console.log(nomes.indexOf('Joabe Costa'));
 console.log(nomes.indexOf('Jao'));//quando retorna -1 significa que nao existe o elemento
+*/
+
+
+/*
+let nomes = [
+    'Gabriel Lima Pereira', 
+    'Danilo Diniz',
+    'Eduardo Santos',
+    'Leticia Pereira',
+    'Iulia Mitch',
+ ]
+
+ console.log(nomes);
+ console.log();
+
+ let novoNome = prompt('Qual o novo nome? ');
+ nomes.push(novoNome);
+
+ console.log(nomes);
+*/
+
+//exercicio 1
+/**
+ Faça um Programa que leia 20 números inteiros e armazene-os
+  num array. Armazene os números pares no array PAR e
+   os números IMPARES no array IMPAR. Imprima os três vetores.
+
+ 
+console.log('Verifica 20 numeros se sao par ou impar')
+console.log()
+
+let contador = 1;
+let numeros = [];
+let nmrImp = [];
+let nmrPar = [];
+let novoNum;
+
+while (contador < 21){
+    novoNum = +prompt('Digite um numero: ')
+    numeros.push(novoNum)
+    contador++;
+    if ((novoNum%2)== 0){
+        nmrPar.push(novoNum);
+    }
+    else{
+        nmrImp.push(novoNum);
+    }
+}
+
+
+
+console.log(numeros);
+console.log('nmr pares', nmrPar);
+console.log('nmr impares', nmrImp);
+*/
+//resolucao prof:
+/*
+let num;
+let todos = [];
+let pares = [];
+let impares = [];
+let contador = 1;
+
+while (contador <= 20){
+    num = +prompt(`Digite o ${contador}º número: `);
+    todos.push(num);
+    if (num % 2 == 0){
+        pares.push(num)
+    } else {
+        impares.push(num)
+    }
+    contador++    
+}
+console.log();
+console.log('Todos os números: ');
+console.log(todos);
+
+console.log();
+console.log('Pares: ');
+console.log(pares);
+
+console.log();
+console.log('Impares');
+console.log(impares);
+*/
+
+
+
+//exercicio 2
+/*Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada 
+informação no seu respectivo array. Imprima a média de idade e de altura.*/
+
+let idade = [];
+let altura = [];
+let media;
+let contador = 0;
+
+while (contador < 5){
+    let pedeIdade = +prompt('Digite a idade: ')
+    let pedeAltura = +prompt('Digite a altura em cm: ')
+    idade.push(pedeIdade);
+    altura.push(pedeAltura);
+    contador++;
+    
+}
+console.log(idade,altura)
