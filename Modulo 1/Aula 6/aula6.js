@@ -139,3 +139,16 @@ while (jogo == 'sim'){
 
 
 //AULA 6 comeca aqui:
+
+
+let idade = [7,14,21];
+let alunoNovo = prompt('NOme do aluno novo: ');
+let nome = ['Gabriel','Sasuke','JooJ', alunoNovo];
+
+//console.log(typeof(nome) + ' '+ nome + ' '+typeof(idade)+' ' +idade + ' e o tamanho do array é:_'+ nome.length + ' e o tamanho do array idade é:_'+idade.length );
+
+console.log(nome[2], nome[2].length); // array comeca do 0 (o 1° indice é 0)
+
+console.log(idade[0]+ idade[1]);
+
+console.log(nome[nome.length - 1]);
