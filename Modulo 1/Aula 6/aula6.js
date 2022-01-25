@@ -256,6 +256,8 @@ console.log(numeros);
 console.log('nmr pares', nmrPar);
 console.log('nmr impares', nmrImp);
 */
+
+
 //resolucao prof:
 /*
 let num;
