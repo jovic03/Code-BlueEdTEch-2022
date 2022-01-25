@@ -140,7 +140,7 @@ while (jogo == 'sim'){
 
 //AULA 6 comeca aqui:
 
-
+/*
 let idade = [7,14,21];
 let alunoNovo = prompt('NOme do aluno novo: ');
 let nome = ['Gabriel','Sasuke','JooJ', alunoNovo];
@@ -152,3 +152,50 @@ console.log(nome[2], nome[2].length); // array comeca do 0 (o 1° indice é 0)
 console.log(idade[0]+ idade[1]);
 
 console.log(nome[nome.length - 1]);
+*/
+
+
+/*
+let nomes2 = [
+               ['Gabriel Lima Pereira',18], 
+               ['Danilo Diniz',20],
+               ['Eduardo Santos',16],
+               ['Leticia Pereira',18],
+               ['Iulia Mitch',20]
+               [alunoNovo]
+            ]
+
+let idades = [18, 20, 21, 19, 16]
+
+console.log(nomes2);
+console.log(nomes2.length);
+console.log();
+console.log(nomes2)[0];
+console.log(nomes2[1]);
+console.log(nomes2[1][0]);
+console.log(nomes2[1][0],nomes2[2][1]);
+*/
+
+let alunoNovo = prompt('Digite o nome do(a) aluno(a) novo(a): ')
+
+let nomes = [
+               'Gabriel Lima Pereira', 
+               'Danilo Diniz',
+               'Eduardo Santos',
+               'Leticia Pereira',
+               'Iulia Mitch',
+               alunoNovo
+            ]
+
+let idades = [18, 20, 21, 19, 16]
+
+console.log(nomes);
+console.log(idade);
+
+//substituindo o valor de um elemnto em um indice
+nomes[1]='Joabe Costa';
+console.log(nomes)
+
+nomes.indexOf('Joabe Costa')
+console.log(nomes.indexOf('Joabe Costa'));
+console.log(nomes.indexOf('Jao'));//quando retorna -1 significa que nao existe o elemento
