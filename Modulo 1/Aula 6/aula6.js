@@ -295,15 +295,33 @@ informação no seu respectivo array. Imprima a média de idade e de altura.*/
 
 let idade = [];
 let altura = [];
-let media;
 let contador = 0;
 
 while (contador < 5){
+
     let pedeIdade = +prompt('Digite a idade: ')
     let pedeAltura = +prompt('Digite a altura em cm: ')
     idade.push(pedeIdade);
     altura.push(pedeAltura);
     contador++;
-    
+
+        
+     
 }
+
+// como fazer um loop pra somar cada indice sem ter qeu digitar 1 por  1??
+
+let mediaIdade= (idade[0]+idade[1]+idade[2]+idade[3]+idade[4])/5;
+let mediaAltura=(altura[0]+altura[1]+altura[2]+altura[3]+altura[4])/5;
+
 console.log(idade,altura)
+console.log(mediaIdade,mediaAltura)
+console.log();
+console.log(`${idade[0]},${altura[0]}
+${idade[1]},${altura[1]}
+${idade[2]},${altura[2]}
+${idade[3]},${altura[3]}
+${idade[4]},${altura[4]}
+A média de idade é ${mediaIdade}
+A média de altura é ${mediaAltura}
+****************************`)
