@@ -62,57 +62,49 @@ Papel OU 2
 Tesoura OU 3`)
 
 let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ') 
+let contador = 0;
 
 
-
-while (qtd_rodadas < (qtd_rodadas + 1)){ //quantas rodadas?
+while (contador < (qtd_rodadas )){ //quantas rodadas?
 
     let pede_valor_jogador =  prompt ('Pedra , papel ou tesoura? ');
 
-    if (valor_pc_joke == valores [0]){ //pc jogou pedra
+    if (valor_pc_joke == valores [0]){ //***********************pc jogou pedra
+        valores = valores [0];
 
         if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 ){
             pede_valor_jogador = 'pedra'
 
-            if(pede_valor_jogador == valores [0] ){ //PC pedra x Pessoa pedra
+            if(pede_valor_jogador == valores ){ //PC pedra x Pessoa pedra
                 console.log('Emptatou');
                 console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`);
-            }
-            
-            if (pede_valor_jogador == valores [1]){//PC pedra x Pessoa papel
-                console.log('Ganhou')
-                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`)
-            }
-            if (pede_valor_jogador == valores [2]){//PC pedra x Pessoa tesoura
-                console.log('Perdeu')
-                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`)
+                contador++;
             }
 
         }
-    
-        // if (pede_valor_jogador.toLocaleLowerCase == 'pedra ' || pede_valor_jogador == 1 ){
-        //     pede_valor_jogador = pede_valor_jogador.toLocaleLowerCase();
-            
+        if (pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 ){
+            pede_valor_jogador = 'papel';
 
-        //     //pedra x pedra:
-        //     if (pede_valor_jogador == valores[0]){ 
-        //         console.log('Emptatou')
-        //         console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra `)
-        //     }
+            if(pede_valor_jogador == valores ){ //PC pedra x Pessoa papel
+                console.log('Ganhou');
+                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`);
+                contador++;
+            }
 
-        //     //pedra x papel:
-        //     if (pede_valor_jogador == valores[1]){ 
-        //         console.log('Você perdeu, papel embrulha pedra.')
-        //     }
+        }
+        if (pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3 ){
+            pede_valor_jogador = 'tesoura';
 
-        //     //pedra x tesoura:
-        //     if(pede_valor_jogador == valores[2]){ 
-        //         console.log('Você ganhou!')            
-        //     }
-            
-        // }
+            if(pede_valor_jogador == valores ){ //PC pedra x Pessoa tesoura
+                console.log('Perdeu');
+                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`);
+                contador++;
+            }
+
+        }
+
     }
-    
+
     
 }
 
