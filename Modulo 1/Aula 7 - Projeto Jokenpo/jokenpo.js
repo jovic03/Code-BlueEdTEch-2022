@@ -47,24 +47,12 @@ Perguntar se o Jogador quer jogar novamente: Se sim volte ao primeiro passo, se 
 const prompt = require('prompt-sync')();
 
 
-
-//let pede_valor_jogador =  prompt ('Pedra, papel ou tesoura? ');
-
-
-//let valor_pc_joke = Math.floor(Math.random() * 3)+1;//escolha do pc do que jogar
-
-
-// let valor_pc_possibilidades = Math.floor(Math.random() * 1000);
-
-//console.log(pede_valor_jogador,valor_pc_joke,valor_pc_possibilidades);
-
-/*
 console.log('Olá, seja bem vindo , iremos jogar o bom e velho pedra, papel e tesoura.')
 console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitar das seguintes formas: ')
 console.log(`Pedra OU 1
 Papel OU 2
 Tesoura OU 3`)
-*/
+
 
 
 
@@ -72,7 +60,6 @@ let valores = ['pedra','papel','tesoura']; // [0] = pedra, [1] = papel, [2] = te
 let contador = 0;
 let pcVenceu = 0;
 let pessoaVenceu = 0;
-//let comecar = 0;
 let empate = 0;
 
 
@@ -141,7 +128,6 @@ while (true){
             }
         }
 
-        //console.log(escolhaPc, vlrAleatorio);
         contador++;
 
 
@@ -155,147 +141,4 @@ while (true){
         break;
     }
 }
-
-
-
-/*
-while (continuar){ //quantas rodadas?
-
-
-        let pede_valor_jogador =  prompt ('Pedra , papel ou tesoura? ');//pessoa
-        console.log(valores[valor_pc_joke]);
-
-
-        if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 || pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 || pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3)
-        {//acima teste para saber se foi digitado um valor correto
-
-        if (valor_pc_joke == valores [0]){ //***********************pc jogou pedra
-            valores = valores [0];
-
-            if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 ){
-                pede_valor_jogador = 'pedra';//pq aqui transformo seja o que for que o user digitou para pedra em minusculo ou 1 em pedra
-                let teste = prompt('teste');
-
-                if(pede_valor_jogador == valores ){ //PC pedra x Pessoa pedra
-                    console.log('Empatatou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 ){
-                pede_valor_jogador = 'papel';
-
-                if(pede_valor_jogador == valores ){ //PC pedra x Pessoa papel
-                    console.log('Ganhou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pessoaVenceu++;
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3 ){
-                pede_valor_jogador = 'tesoura';
-
-                if(pede_valor_jogador == valores ){ //PC pedra x Pessoa tesoura
-                    console.log('Perdeu');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pcVenceu++;
-                }
-
-            }
-
-        }
-
-
-        if (valor_pc_joke == valores [1]){ //***********************pc jogou papel
-            valores = valores [1];
-
-            if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 ){
-                pede_valor_jogador = 'pedra'
-
-                if(pede_valor_jogador == valores ){ //PC papel x Pessoa pedra
-                    console.log('Perdeu');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pcVenceu++;
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 ){
-                pede_valor_jogador = 'papel';
-
-                if(pede_valor_jogador == valores ){ //PC papel x Pessoa papel
-                    console.log('Empatou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3 ){
-                pede_valor_jogador = 'tesoura';
-
-                if(pede_valor_jogador == valores ){ //PC papel x Pessoa tesoura
-                    console.log('Ganhou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pessoaVenceu++;
-
-                }
-
-            }
-
-        }
-
-        //pc jogou tesoura
-        if (valor_pc_joke == valores [2]){ //***********************pc jogou tesoura
-            valores = valores [2];
-
-            if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 ){
-                pede_valor_jogador = 'pedra'
-
-                if(pede_valor_jogador == valores ){ //PC tesoura x Pessoa pedra
-                    console.log('Ganhou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pessoaVenceu++;
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 ){
-                pede_valor_jogador = 'papel';
-
-                if(pede_valor_jogador == valores ){ //PC tesoura x Pessoa papel
-                    console.log('Perdeu');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-                    pcVenceu++;
-
-                }
-
-            }
-            if (pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3 ){
-                pede_valor_jogador = 'tesoura';
-
-                if(pede_valor_jogador == valores ){ //PC tesoura x Pessoa tesoura
-                    console.log('Empatou');
-                    console.log(`Você jogou ${pede_valor_jogador} e o computador jogou ${valores}!`);
-                    contador++;
-
-                }
-
-            }
-
-        }
-    }
-    else{
-        console.log('Você digitou um valor inválido, reinicie o jogo! '+ valor_pc_joke + ' '+ pede_valor_jogador);
-        break;
-    }    
-        
-}
-*/
-
 
