@@ -54,6 +54,7 @@ for (let i = inicio; i <= final; i = i + incremento) { // este "i" é outra vari
 */
 
 //descrescimo
+/*
 let inicio = +prompt ('qual nmr vc quer comcecar? ');
 let final= +prompt ('qual numero vc quer terminar ');
 let incremento = +prompt('qual vlr de incremento ');
@@ -61,4 +62,17 @@ let incremento = +prompt('qual vlr de incremento ');
 for (let i = inicio; i >= final; i = i - incremento) { // este "i" é outra variavel
     console.log("Isso é uma repetição!");
     console.log(i)
+}
+*/
+
+
+// repeticaO DE FOR + while (como se fosse comprar mais fichas)
+let continuar = 's';
+
+while (continuar == 's'){
+    let fichas = +prompt('Quer quantas fichas? ');
+    for(let i = fichas; i>= 0; i--){
+        console.log(`VOce ainda tem ${i}`);
+    }
+    continuar = prompt('quer comprar mais fichas?')
 }
