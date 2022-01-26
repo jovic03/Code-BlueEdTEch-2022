@@ -47,30 +47,79 @@ Perguntar se o Jogador quer jogar novamente: Se sim volte ao primeiro passo, se 
 const prompt = require('prompt-sync')();
 
 
-let valores = ['pedra','papel','tesoura']; // [0] 1=pedra, [1] 2=papel, [2] 3=tesoura
 
 //let pede_valor_jogador =  prompt ('Pedra, papel ou tesoura? ');
-let valor_pc_joke = Math.floor(Math.random() * 3)+1;//escolha do pc do que jogar
+
+
+//let valor_pc_joke = Math.floor(Math.random() * 3)+1;//escolha do pc do que jogar
+
+
 // let valor_pc_possibilidades = Math.floor(Math.random() * 1000);
 
 //console.log(pede_valor_jogador,valor_pc_joke,valor_pc_possibilidades);
 
+/*
 console.log('Olá, seja bem vindo , iremos jogar o bom e velho pedra, papel e tesoura.')
 console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitar das seguintes formas: ')
 console.log(`Pedra OU 1
 Papel OU 2
 Tesoura OU 3`)
+*/
 
+
+
+let valores = ['pedra','papel','tesoura']; // [0] 1=pedra, [1] 2=papel, [2] 3=tesoura
 let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ') 
 let contador = 0;
 let pcVenceu = 0;
 let pessoaVenceu = 0;
+let comecar = 0;
+let empate = 0;
+
+while (contador < qtd_rodadas){
+    let vlrAleatorio = Math.floor(Math.random() * 3);
+    let escolhaPc = valores[vlrAleatorio];
+    let escolhaUsr = prompt('Pedra, papel ou tesoura? ');
+
+    if (escolhaPc == 'pedra'){
+        if (escolhaUsr.toLocaleLowerCase == 'papel'){
+            pessoaVenceu++;
+        }
+        else if (escolhaUsr.toLocaleLowerCase == 'tesoura'){
+            pcVenceu++;
+        }
+        else{
+            empate++;
+        }
+    }
+
+    else if (escolhaPc == 'papel'){
+        if (escolhaUsr.toLocaleLowerCase == 'tesoura'){ //pc Papel x usr tesoura
+            pessoaVenceu++;
+        }
+        else if (escolhaUsr.toLocaleLowerCase == 'pedra'){ // pc papel x usr pedra
+            pcVenceu++;
+        }
+        else{
+            empate++; //pc papel x usr papel
+        }
+
+    }
+
+    console.log(escolhaPc, vlrAleatorio);
+    contador++;
+
+}
 
 
-while (contador < (qtd_rodadas )){ //quantas rodadas?
+/*
+while (continuar){ //quantas rodadas?
 
 
-        let pede_valor_jogador =  prompt ('Pedra , papel ou tesoura? ');
+        let pede_valor_jogador =  prompt ('Pedra , papel ou tesoura? ');//pessoa
+        console.log(valores[valor_pc_joke]);
+
+
         if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 || pede_valor_jogador.toLocaleLowerCase == 'papel' || pede_valor_jogador == 2 || pede_valor_jogador.toLocaleLowerCase == 'tesoura' || pede_valor_jogador == 3)
         {//acima teste para saber se foi digitado um valor correto
 
@@ -201,6 +250,6 @@ while (contador < (qtd_rodadas )){ //quantas rodadas?
     }    
         
 }
-
+*/
 
 
