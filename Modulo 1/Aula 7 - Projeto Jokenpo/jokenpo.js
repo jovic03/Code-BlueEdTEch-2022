@@ -68,48 +68,94 @@ Tesoura OU 3`)
 
 
 
-let valores = ['pedra','papel','tesoura']; // [0] 1=pedra, [1] 2=papel, [2] 3=tesoura
-let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ') 
+let valores = ['pedra','papel','tesoura']; // [0] = pedra, [1] = papel, [2] = tesoura 
 let contador = 0;
 let pcVenceu = 0;
 let pessoaVenceu = 0;
-let comecar = 0;
+//let comecar = 0;
 let empate = 0;
 
-while (contador < qtd_rodadas){
-    let vlrAleatorio = Math.floor(Math.random() * 3);
-    let escolhaPc = valores[vlrAleatorio];
-    let escolhaUsr = prompt('Pedra, papel ou tesoura? ');
 
-    if (escolhaPc == 'pedra'){
-        if (escolhaUsr.toLocaleLowerCase == 'papel'){
-            pessoaVenceu++;
+let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ');
+
+while (true){
+
+    while (contador < qtd_rodadas){
+        let vlrAleatorio = Math.floor(Math.random() * 3);
+        let escolhaPc = valores[vlrAleatorio];// vlrAletorio atribuido para inidice
+        let escolhaUsr = prompt('Pedra, papel ou tesoura? ').toLocaleLowerCase();
+        let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`
+
+        if (escolhaPc == 'pedra' ){
+            if (escolhaUsr == 'papel' ){ //pc pedra x usr papel
+                console.log(msgEscolha);
+                console.log('Pessoa venceu!');
+
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'tesoura'  || escolhaUsr == 2){
+                console.log(msgEscolha);
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if  (escolhaUsr == 'pedra' || escolhaUsr == 0) {
+                console.log(msgEscolha);
+                console.log('Empatou!');
+                empate++;
+            }
         }
-        else if (escolhaUsr.toLocaleLowerCase == 'tesoura'){
-            pcVenceu++;
+
+        else if (escolhaPc == 'papel'){
+            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){ //pc Papel x usr tesoura
+                console.log(msgEscolha);
+                console.log('Pessoa venceu!');
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'pedra' || escolhaUsr == 0){ // pc papel x usr pedra
+                console.log(msgEscolha);
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if  (escolhaUsr == 'papel' || escolhaUsr == 1){
+                console.log(msgEscolha);
+                console.log('Empatou!');
+                empate++; //pc papel x usr papel
+            }
+
         }
-        else{
-            empate++;
+        else if (escolhaPc == 'tesoura'){
+            if (escolhaUsr == 'pedra' || escolhaUsr == 0){ //pc tesoura x usr pedra
+                console.log(msgEscolha);
+                console.log('Pessoa venceu!');
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'papel' || escolhaUsr == 1){ // pc tesoura x usr papel
+                console.log(msgEscolha);
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){
+                console.log(msgEscolha);
+                console.log('Empatou!');
+                empate++; //pc tesoura x usr tesoura
+            }
         }
+
+        //console.log(escolhaPc, vlrAleatorio);
+        contador++;
+
+
     }
+    console.log(`Você venceu ${pessoaVenceu} vezes , o PC ${pcVenceu} vezes e empatou ${empate} vezes!`)
 
-    else if (escolhaPc == 'papel'){
-        if (escolhaUsr.toLocaleLowerCase == 'tesoura'){ //pc Papel x usr tesoura
-            pessoaVenceu++;
-        }
-        else if (escolhaUsr.toLocaleLowerCase == 'pedra'){ // pc papel x usr pedra
-            pcVenceu++;
-        }
-        else{
-            empate++; //pc papel x usr papel
-        }
+    contador=0;
 
+    let txtCont = prompt('Deseja continuar?(s/n) ').toLocaleLowerCase();
+    if (txtCont == 'n'){
+        break;
     }
-
-    console.log(escolhaPc, vlrAleatorio);
-    contador++;
-
 }
+
 
 
 /*
