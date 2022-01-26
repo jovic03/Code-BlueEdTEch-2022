@@ -44,6 +44,8 @@ Perguntar se o Jogador quer jogar novamente: Se sim volte ao primeiro passo, se 
 
 */
 
+//TEM QUE USAR FOR
+
 const prompt = require('prompt-sync')();
 
 
