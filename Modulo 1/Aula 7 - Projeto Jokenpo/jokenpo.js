@@ -47,13 +47,10 @@ Perguntar se o Jogador quer jogar novamente: Se sim volte ao primeiro passo, se 
 const prompt = require('prompt-sync')();
 
 
-let pedra = 'pedra';//1
-let papel = 'papel';//2
-let tesoura = 'tesoura';//3
+let valores = ['pedra','papel','tesoura']; // [0] 1=pedra, [1] 2=papel, [2] 3=tesoura
 
 //let pede_valor_jogador =  prompt ('Pedra, papel ou tesoura? ');
 let valor_pc_joke = Math.floor(Math.random() * 3)+1;//escolha do pc do que jogar
-
 // let valor_pc_possibilidades = Math.floor(Math.random() * 1000);
 
 //console.log(pede_valor_jogador,valor_pc_joke,valor_pc_possibilidades);
@@ -66,16 +63,57 @@ Tesoura OU 3`)
 
 let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ') 
 
-while (qtd_rodadas < (qtd_rodadas + 1)){
+
+
+while (qtd_rodadas < (qtd_rodadas + 1)){ //quantas rodadas?
 
     let pede_valor_jogador =  prompt ('Pedra , papel ou tesoura? ');
 
-    if (pede_valor_jogador.toLocaleLowerCase == 'pedra ' || pede_valor_jogador == 1 ){
-        if (pede_valor_jogador == valor_pc_joke){
-            if(valor_pc_joke)
+    if (valor_pc_joke == valores [0]){ //pc jogou pedra
+
+        if (pede_valor_jogador.toLocaleLowerCase == 'pedra' || pede_valor_jogador == 1 ){
+            pede_valor_jogador = 'pedra'
+
+            if(pede_valor_jogador == valores [0] ){ //PC pedra x Pessoa pedra
+                console.log('Emptatou');
+                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`);
+            }
+            
+            if (pede_valor_jogador == valores [1]){//PC pedra x Pessoa papel
+                console.log('Ganhou')
+                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`)
+            }
+            if (pede_valor_jogador == valores [2]){//PC pedra x Pessoa tesoura
+                console.log('Perdeu')
+                console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra!`)
+            }
+
         }
-        
+    
+        // if (pede_valor_jogador.toLocaleLowerCase == 'pedra ' || pede_valor_jogador == 1 ){
+        //     pede_valor_jogador = pede_valor_jogador.toLocaleLowerCase();
+            
+
+        //     //pedra x pedra:
+        //     if (pede_valor_jogador == valores[0]){ 
+        //         console.log('Emptatou')
+        //         console.log(`Você jogou ${pede_valor_jogador} e o computador jogou Pedra `)
+        //     }
+
+        //     //pedra x papel:
+        //     if (pede_valor_jogador == valores[1]){ 
+        //         console.log('Você perdeu, papel embrulha pedra.')
+        //     }
+
+        //     //pedra x tesoura:
+        //     if(pede_valor_jogador == valores[2]){ 
+        //         console.log('Você ganhou!')            
+        //     }
+            
+        // }
     }
+    
+    
 }
 
 
