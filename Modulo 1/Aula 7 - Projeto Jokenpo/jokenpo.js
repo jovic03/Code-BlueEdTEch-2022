@@ -196,7 +196,7 @@ while (contador < (qtd_rodadas )){ //quantas rodadas?
         }
     }
     else{
-        console.log('Você digitou um valor inválido, reinicie o jogo! '+ valor_pc_joke);
+        console.log('Você digitou um valor inválido, reinicie o jogo! '+ valor_pc_joke + ' '+ pede_valor_jogador);
         break;
     }    
         
