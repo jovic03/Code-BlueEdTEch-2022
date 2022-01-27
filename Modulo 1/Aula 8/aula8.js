@@ -147,10 +147,64 @@ for (const indice in filmes){
 [ 1, 2, 3, 4 ]
 [ 2, 3, 4, 5 ]
 */
+let colunas  = +prompt('Quantas colunas? ');
+let linhas = +prompt('Quantas linhas? ')
+//let matrix = []; nao precisa
+let lista = [];
+let a = 0;
+
+for (i = 0 ; i < linhas; i++){//cria linha
+
+    for (let i = a ; i < colunas + a ; i++){//cria coluna
+        lista.push(i)
+    }
+    console.log(lista);
+    //matrix.push(lista) nao precisa
+    lista = [];
+    a++;
+}
+
+
+
 /*
 2-Escreva um programa que peça um número e escreva o fatorial dele. Exemplo 6! = 6 x 5 x 4 x 3 x 2 x 1 = 720
 */
+
+/*
+let num = +prompt('Qual número você que fatorar? ');
+let resultado = 1;
+let linha = ';'
+
+for (let i = num; i > 0; i --) {
+    
+    resultado = resultado * i;
+    linha = linha + i + ' * '
+
+}
+console.log(resultado);
+console.log(linha, ' = ', resultado);
+*/
+
+
+
+
+/*
 3-Faça um programa que peça um número e imprima toda a tabuada dele do 1 ao 10.
+*/
+/*
+let vlrTabuada = +prompt('Qual tabuada vc quer? ');
+
+for (let i = 0; i <= (vlrTabuada * 10); i = i +vlrTabuada) { // este "i" é outra variavel
+    
+    console.log(i);
+} 
+    let vlrTabuada = +prompt('Qual tabuada vc quer? ');
+
+    for (let i = 1; i <= 10; i++){
+        console.log(`${vlwTabuada} * ${i} = ${num * i}`)
+    }
+
+*/
 
 /*
 4-Faça um programa que carregue uma lista com os modelos de cinco carros. Carregue uma outra lista com o consumo desses carros, isto é, quantos quilômetros cada um desses carros faz com um litro de combustível. Calcule e mostre:
