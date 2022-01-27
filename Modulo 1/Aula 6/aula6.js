@@ -294,7 +294,7 @@ console.log(impares);
 //exercicio 2
 /*Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada 
 informação no seu respectivo array. Imprima a média de idade e de altura.*/
-
+/*
 let idade = [];
 let altura = [];
 let contador = 0;
@@ -327,3 +327,37 @@ ${idade[4]},${altura[4]}
 A média de idade é ${mediaIdade}
 A média de altura é ${mediaAltura}
 ****************************`)
+*/
+
+//exercicio 3
+/*
+Faça um programa em que o usuário escolha a quantidade de alunos
+a serem cadastrados e peça o nome e nota de cada um. Armazene 
+as informações em duas listas separadas e no final imprima o nome e a 
+nota correspondente de cada aluno, e a média total da notas.
+*/
+
+let nomeAlunoArm = [];
+let notaAlunoArm = [];
+
+let qtdAlunos = +prompt('Quantos alunos você quer cadastrar? ');
+// let nomeAluno = prompt('Qual o nome deste aluno? ');
+// let notaAluno = +prompt('Qual  a nota desse aluno?');
+
+for (let i = 0; i < qtdAlunos; i++){
+    let nomeAluno = prompt('Qual o nome deste aluno? ');
+    let notaAluno = +prompt('Qual  a nota desse aluno? ');
+    
+    nomeAlunoArm.push(nomeAluno);
+    notaAlunoArm.push(notaAluno);
+}
+
+//ultimo indice de um array
+// let ultimo = notaAlunoArm[notaAlunoArm.length -1];
+// console.log(ultimo)
+
+/*
+console.log(`${nomeAlunoArm}
+ ${notaAlunoArm}`);
+ console.log(notaAlunoArm/notaAlunoArm.length)
+*/
