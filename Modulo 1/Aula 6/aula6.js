@@ -337,6 +337,7 @@ as informações em duas listas separadas e no final imprima o nome e a
 nota correspondente de cada aluno, e a média total da notas.
 */
 
+/*
 let nomeAlunoArm = [];
 let notaAlunoArm = [];
 
@@ -359,11 +360,62 @@ for (let a = 0 ; a < notaAlunoArm.length;a++){
 
 console.log(`${nomeAlunoArm}
 ${notaAlunoArm}
-media: ${media}`);
+media: ${media}`);*/
 
 //ultimo indice de um array
 // let ultimo = notaAlunoArm[notaAlunoArm.length -1];
 // console.log(ultimo)
 
 
+//ex 4
+/**
+ * Faça um programa que simule um lançamento de dados.
+ * Lance o dado 100 vezes e armazene os resultados em
+ *  um array. Depois, mostre quantas vezes cada valor
+ *  foi conseguido.
+ */
 
+let armDados = [];
+let armUm = 0;
+let armDois = 0;
+let armTres = 0;
+let armQuatro = 0;
+let armCinco = 0;
+let armSeis = 0;
+
+
+for ( let i = 0; i < 100; i++ ){
+    let vlrAleatorio = Math.floor(Math.random() * 6)+1;
+    armDados.push(vlrAleatorio);
+
+
+    if (vlrAleatorio == 1){
+        armUm++;
+    }
+    if (vlrAleatorio == 2){
+        armDois++;
+    }
+    if (vlrAleatorio == 3){
+        armTres++;
+    }
+    if (vlrAleatorio == 4){
+        armQuatro++;
+    }
+    if (vlrAleatorio == 5){
+        armCinco++;
+    }
+    if (vlrAleatorio == 6){
+        armSeis++;
+    }
+
+
+}    
+    
+
+console.log(`${armDados}
+${armUm} incidencias do mesmo
+${armDois} incidencias do mesmo
+${armTres} incidencias do mesmo
+${armQuatro} incidencias do mesmo
+${armCinco} incidencias do mesmo
+${armSeis} incidencias do mesmo`);
