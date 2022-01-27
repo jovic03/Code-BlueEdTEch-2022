@@ -340,24 +340,30 @@ nota correspondente de cada aluno, e a média total da notas.
 let nomeAlunoArm = [];
 let notaAlunoArm = [];
 
+
 let qtdAlunos = +prompt('Quantos alunos você quer cadastrar? ');
-// let nomeAluno = prompt('Qual o nome deste aluno? ');
-// let notaAluno = +prompt('Qual  a nota desse aluno?');
 
 for (let i = 0; i < qtdAlunos; i++){
-    let nomeAluno = prompt('Qual o nome deste aluno? ');
-    let notaAluno = +prompt('Qual  a nota desse aluno? ');
+    let nomeAluno = prompt('Digite o nome do aluno: ');
+    let notaAluno = +prompt('Qual a nota do aluno? ');
     
     nomeAlunoArm.push(nomeAluno);
     notaAlunoArm.push(notaAluno);
 }
 
+let media = 0;
+
+for (let a = 0 ; a < notaAlunoArm.length;a++){
+    media = media + notaAlunoArm[a];
+}
+
+console.log(`${nomeAlunoArm}
+${notaAlunoArm}
+media: ${media}`);
+
 //ultimo indice de um array
 // let ultimo = notaAlunoArm[notaAlunoArm.length -1];
 // console.log(ultimo)
 
-/*
-console.log(`${nomeAlunoArm}
- ${notaAlunoArm}`);
- console.log(notaAlunoArm/notaAlunoArm.length)
-*/
+
+
