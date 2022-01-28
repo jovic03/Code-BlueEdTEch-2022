@@ -50,7 +50,7 @@ const prompt = require('prompt-sync')();
 
 console.log('Olá, seja bem vindo , iremos jogar o bom e velho pedra, papel e tesoura.')
 console.log('🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮');
-console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitar das seguintes formas: ')
+console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitando das seguintes formas: ')
 console.log(`Pedra OU 0
 Papel OU 1
 Tesoura OU 2`)
@@ -146,11 +146,30 @@ while (true){
     console.log();
     console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
     console.log();
-    console.log(`Você venceu ${pessoaVenceu} vezes , o PC ${pcVenceu} vezes e empatou ${empate} vezes!`)
-    console.log();
+    if (pessoaVenceu > pcVenceu){
+        console.log('Parabéns você ganhou!!!');
+        console.log(`Você venceu ${pessoaVenceu} partidas , o PC ${pcVenceu} partidas e tiveram ${empate} empates!`)
+        console.log();
+    }
+    else if (pessoaVenceu<pcVenceu){
+        console.log('Poxa, parece que a Maquina venceu desta vez..');
+        console.log(`Você venceu ${pessoaVenceu} partidas , o PC ${pcVenceu} partidas e tiveram ${empate} empates!`)
+        console.log();
+    }
+    else if (pessoaVenceu==pcVenceu){
+        console.log('Olha só, parece que tivemos um empate!');
+        console.log(`Você venceu ${pessoaVenceu} partidas , o PC ${pcVenceu} partidas e tiveram ${empate} empates!`)
+        console.log();
+    }
 
     let txtCont = prompt('Deseja continuar?(s/n) ').toLocaleLowerCase();
+    console.log();
     if (txtCont == 'n'){
         break;
+    }
+    else if (txtCont =='s'){
+        pessoaVenceu=0;
+        pcVenceu=0;
+        empate=0;
     }
 }
