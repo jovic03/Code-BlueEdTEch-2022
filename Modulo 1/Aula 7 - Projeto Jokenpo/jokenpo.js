@@ -44,36 +44,37 @@ Perguntar se o Jogador quer jogar novamente: Se sim volte ao primeiro passo, se 
 
 */
 
-//TEM QUE USAR FOR
 
 const prompt = require('prompt-sync')();
 
 
 console.log('Olá, seja bem vindo , iremos jogar o bom e velho pedra, papel e tesoura.')
+console.log('🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮');
 console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitar das seguintes formas: ')
-console.log(`Pedra OU 1
-Papel OU 2
-Tesoura OU 3`)
+console.log(`Pedra OU 0
+Papel OU 1
+Tesoura OU 2`)
+console.log()
 
 
 
 
 let valores = ['pedra','papel','tesoura']; // [0] = pedra, [1] = papel, [2] = tesoura 
-//let contador = 0;
 let pcVenceu = 0;
 let pessoaVenceu = 0;
 let empate = 0;
 
 
-// let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ');
-
 while (true){
     let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ');
+    console.log();
 
     for (let i = 0; i < qtd_rodadas; i++){
         let vlrAleatorio = Math.floor(Math.random() * 3);
-        let escolhaPc = valores[vlrAleatorio];// vlrAletorio atribuido para inidice
+        let escolhaPc = valores[vlrAleatorio];// vlrAletorio atribuido para o inidice
+        console.log('--------------------------');
         let escolhaUsr = prompt('Pedra, papel ou tesoura? ').toLocaleLowerCase();
+
         let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`
 
         if (escolhaPc == 'pedra' ){
@@ -84,13 +85,13 @@ while (true){
 
                 pessoaVenceu++;
             }
-            if (escolhaUsr == 'tesoura'  || escolhaUsr == 2){
+            if (escolhaUsr == 'tesoura'  || escolhaUsr == 2){//pc pedra x usr tesoura
                 escolhaUsr = 'tesoura';
                 console.log(msgEscolha);
                 console.log('PC venceu!');
                 pcVenceu++;
             }
-            if  (escolhaUsr == 'pedra' || escolhaUsr == 0) {
+            if  (escolhaUsr == 'pedra' || escolhaUsr == 0) {//pc pedra x usr pedra
                 escolhaUsr = 'pedra';
                 console.log(msgEscolha);
                 console.log('Empatou!');
@@ -111,7 +112,7 @@ while (true){
                 console.log('PC venceu!');
                 pcVenceu++;
             }
-            if  (escolhaUsr == 'papel' || escolhaUsr == 1){
+            if  (escolhaUsr == 'papel' || escolhaUsr == 1){//pc Papel x usr papel
                 escolhaUsr = 'papel';
                 console.log(msgEscolha);
                 console.log('Empatou!');
@@ -132,7 +133,7 @@ while (true){
                 console.log('PC venceu!');
                 pcVenceu++;
             }
-            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){
+            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){// pc tesoura x usr tesoura
                 escolhaUsr = 'tesoura';
                 console.log(msgEscolha);
                 console.log('Empatou!');
@@ -142,13 +143,145 @@ while (true){
 
 
     }
+    console.log();
+    console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
+    console.log();
     console.log(`Você venceu ${pessoaVenceu} vezes , o PC ${pcVenceu} vezes e empatou ${empate} vezes!`)
-
-    //contador=0; 
 
     let txtCont = prompt('Deseja continuar?(s/n) ').toLocaleLowerCase();
     if (txtCont == 'n'){
         break;
     }
 }
+
+
+
+
+//com o a conversao funcionando:
+
+/*
+console.log('Olá, seja bem vindo , iremos jogar o bom e velho pedra, papel e tesoura.')
+console.log('🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮');
+console.log('Mas para isso temos uma regrinha, para jogar você pode escolher sua decisão digitar das seguintes formas: ')
+console.log(`Pedra OU 0
+Papel OU 1
+Tesoura OU 2`)
+
+
+
+
+let valores = ['pedra','papel','tesoura']; // [0] = pedra, [1] = papel, [2] = tesoura 
+//let contador = 0;
+let pcVenceu = 0;
+let pessoaVenceu = 0;
+let empate = 0;
+
+
+// let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ');
+
+while (true){
+    let qtd_rodadas = +prompt('Quantas rodadas vamos jogar? ');
+    console.log('---------------------------------------');
+
+    for (let i = 0; i < qtd_rodadas; i++){
+        let vlrAleatorio = Math.floor(Math.random() * 3);
+        let escolhaPc = valores[vlrAleatorio];// vlrAletorio atribuido para o inidice
+        let escolhaUsr = prompt('Pedra, papel ou tesoura? ').toLocaleLowerCase();
+        console.log('*******************');
+        //let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`
+
+        if (escolhaPc == 'pedra' ){
+            if (escolhaUsr == 'papel' || escolhaUsr == 1 ){ //pc pedra x usr papel
+                escolhaUsr = 'papel';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Pessoa venceu!');
+
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'tesoura'  || escolhaUsr == 2){//pc pedra x usr tesoura
+                escolhaUsr = 'tesoura';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if  (escolhaUsr == 'pedra' || escolhaUsr == 0) {//pc pedra x usr pedra
+                escolhaUsr = 'pedra';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Empatou!');
+                empate++;
+            }
+        }
+
+        else if (escolhaPc == 'papel'){
+            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){ //pc Papel x usr tesoura
+                escolhaUsr = 'tesoura';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Pessoa venceu!');
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'pedra' || escolhaUsr == 0){ // pc papel x usr pedra
+                escolhaUsr = 'pedra';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if  (escolhaUsr == 'papel' || escolhaUsr == 1){// pc papel x usr papel
+                escolhaUsr = 'papel';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Empatou!');
+                empate++; //pc papel x usr papel
+            }
+
+        }
+        else if (escolhaPc == 'tesoura'){
+            if (escolhaUsr == 'pedra' || escolhaUsr == 0){ //pc tesoura x usr pedra
+                escolhaUsr = 'pedra';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Pessoa venceu!');
+                pessoaVenceu++;
+            }
+            if (escolhaUsr == 'papel' || escolhaUsr == 1){ // pc tesoura x usr papel
+                escolhaUsr = 'papel';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('PC venceu!');
+                pcVenceu++;
+            }
+            if (escolhaUsr == 'tesoura' || escolhaUsr == 2){// pc tesoura x usr tesoura
+                escolhaUsr = 'tesoura';
+                // let msgEscolha = `Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`;
+                // console.log(msgEscolha);
+                console.log(`Voce jogou ${escolhaUsr} e o PC jogou ${escolhaPc}`)
+                console.log('Empatou!');
+                empate++; //pc tesoura x usr tesoura
+            }
+        }
+
+
+    }
+    console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
+    console.log(`Você venceu ${pessoaVenceu} vezes , o PC ${pcVenceu} vezes e empatou ${empate} vezes!`)
+
+    console.log();
+    let txtCont = prompt('Deseja continuar?(s/n) ').toLocaleLowerCase();
+    if (txtCont == 'n'){
+        break;
+    }
+}
+*/
 
