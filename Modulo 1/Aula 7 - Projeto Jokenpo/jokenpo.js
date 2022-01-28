@@ -147,6 +147,7 @@ while (true){
     console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
     console.log();
     console.log(`Você venceu ${pessoaVenceu} vezes , o PC ${pcVenceu} vezes e empatou ${empate} vezes!`)
+    console.log();
 
     let txtCont = prompt('Deseja continuar?(s/n) ').toLocaleLowerCase();
     if (txtCont == 'n'){
