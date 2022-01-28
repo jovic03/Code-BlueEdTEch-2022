@@ -156,12 +156,12 @@ let a = 0;
 for (i = 0 ; i < linhas; i++){//cria linha
 
     for (let j = a ; j < colunas + a ; j++){//cria coluna
-        lista.push(j)
+        lista.push(j);
     }
     console.log(lista);
     //matrix.push(lista) nao precisa
-    lista = [];
-    a++;
+    lista = [];//zera a lista pra ir para proxima linha
+    a++;//este a soma mais na linha
 }
 
 
