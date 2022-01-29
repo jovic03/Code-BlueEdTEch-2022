@@ -63,7 +63,7 @@ console.log(listaUpper);
 */
 
 //diferenca entre for in e for of
-
+/*
 let lista = ['Gabriel', 'Joao Vitor', 'Carlos', 'Jamile', 'Bia'];
 let nomeantigo = prompt ('Digite o nome do aluno a ser alterado: ');
 let novonome = prompt ('Digite o nome a ser atualizado')
@@ -78,6 +78,10 @@ for (let i in lista){// for bom pra usar com splice, afinal retorna o indice
 }
 console.log(lista);
 console.log();
+*/
+
+
+
 
 /*
 let lista = ['Gabriel', 'Joao Vitor', 'Carlos', 'Jamile', 'Bia']
@@ -95,6 +99,7 @@ console.log();
 */
 
 //DO PROFESSOR DURANTE A AULA:
+/*
 console.clear();
 console.log();
 const prompt = require('prompt-sync')();
@@ -196,4 +201,17 @@ for (let i of lista){
 }
 */
 
-console.log();
+//console.log();
+
+
+//somando valores de um array
+let listnum = [13,18,20,16,18,30];
+let soma = 0;
+
+for (let i of listnum){//of pq eu quero valores
+    //console.log(i);
+    soma = soma + i; //pego o valor que estava guardado e somo com o novo (proximo indice)
+    //soma += i//forma simplificada da linha acima
+}
+
+console.log(soma)
