@@ -205,6 +205,8 @@ for (let i of lista){
 
 
 //somando valores de um array
+
+/*
 let listnum = [13,18,20,16,18,30];
 let soma = 0;
 
@@ -215,3 +217,4 @@ for (let i of listnum){//of pq eu quero valores
 }
 
 console.log(soma)
+*/
