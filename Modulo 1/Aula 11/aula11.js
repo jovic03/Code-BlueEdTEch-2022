@@ -1,5 +1,7 @@
 const prompt = require('prompt-sync')();
 
+//revisao/dicas pra resolver exerciocios aula 10
+
 //como pegar o maior numero 
 
 //para string
@@ -22,6 +24,7 @@ for (let i of lista){// percorre a lista
     }*/
 
 //menor
+/*
 let lista = [2,80,15,3,50,49];
  let maior = 0;
 
@@ -34,3 +37,5 @@ for (let i of lista){// percorre a lista
 
 
 console.log(menor);
+*/
+
