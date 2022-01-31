@@ -48,7 +48,11 @@ por um nome. Isso é muito útil quando precisamos executar um certo código vá
 execução do nosso programa, então ao invés de repetir várias vezes esses códigos, criamos uma função para facilitar.
 */
 
-
+//DECLARANDO A FUNCAO: estou ensinando ao computador o que ele tem que fazer
+//eu só prciso ensinar uma vez, depois posso usar quantas vezes necessário
+//basta chamar pelo nome funcao()
+//ela só se ativa depois que eu a chamo
+/*
 function va_tomar_banho (){
     console.log('Tirar a roupa suja');
     console.log('Abrir o chuveriro')
@@ -80,7 +84,9 @@ function va_tomar_banho (){
 // if(sujo =='s'){
 //     va_tomar_banho();
 // }
+*/
 
+/*
 function verifica_sujeira(){
     let sujo = prompt ('Está sujo(a)? ')
     if(sujo =='s'){
@@ -94,4 +100,95 @@ let pessoas = +prompt('Quantas pessoas estao em casa? ');
 for (let i =- 0; i<pessoas;i++){
     verifica_sujeira();
 }
+*/
 
+/*
+function saudacao(){
+    console.log('Seja bem vindo(a) Bluemer!');
+    console.log('Essa é a aula 11 do nosso curso.');
+    console.log();
+}
+
+saudacao();
+*/
+
+/*
+function saudacao(){
+    let nome = prompt('Qual o seu nome? ');
+    let idade = prompt('Qual a sua idade? ')
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
+    if (idade >= 18){
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
+    console.log();
+}
+
+saudacao();
+*/
+
+/*
+function saudacao(){
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
+    if (idade >= 18){
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
+    console.log();
+}
+
+let nome = prompt('Qual o seu nome? ');
+let idade = prompt('Qual a sua idade? ');
+
+saudacao();
+*/
+
+/*
+function saudacao(nome, ano){
+	let idade = 2022 - ano;
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
+    if (idade >= 18){
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
+    console.log();
+}
+
+let nome = prompt('Qual o seu nome? ');
+let nasc = prompt('Qual o seu ano de nascimento? ')
+
+saudacao(nome, nasc)
+*/
+// saudacao(prompt('Qual o seu nome? '), +prompt('Qual o seu ano de nascimento? '));
+
+//forma 2:
+// saudacao(nome, nasc);
+
+// saudacao(nasc, nome); nao funciona pois tem que ser na ordem da funcao 
+//ou seja, nome tem que ser o primeiro parametro da funcao e da nome da chamada da funcao
+//e nasc tem que ser o segundo tal qual ano é o 2º parametro
+
+
+
+function saudacao(a, b){
+	let idade = 2022 - b;
+    console.log();
+    console.log(`Seja bem vindo(a) ${a}!`);
+    if (idade >= 18){
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
+    console.log();
+}
+
+let x = prompt('Qual o seu nome? ');
+let y = prompt('Qual o seu ano de nascimento? ')
+
+saudacao(x,y)
