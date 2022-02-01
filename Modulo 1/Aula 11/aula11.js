@@ -329,6 +329,26 @@ console.log(res);
 
 
 /*
+function supercalculadora(a,b,c){
+    let resultado = [];
+    resultado.push(a + b);
+    resultado.push(a - b);
+    resultado.push(a * b);
+    resultado.push(a / b);
+    return resultado;
+}
+
+
+
+let num1 = +prompt('Digite o 1º número: ');
+let num2 = +prompt('Digite o 2º número: ');
+let sinal = prompt('Digite qual operação deseja: ');
+
+let res = supercalculadora(num1,num2,sinal);
+
+console.log(res)
+*/
+/*
 2 - Construa uma função que receba uma data 
 no formato DD/MM/AAAA e devolva uma string no 
 formato 'D de mesPorExtenso de AAAA'. Valide a data e 
