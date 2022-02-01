@@ -214,6 +214,17 @@ let y = prompt('Qual o seu ano de nascimento? ')
 saudacao(y);*/
 
 
+
+/*
+function verifica_sujeira(){
+    let sujo = prompt ('Está sujo(a)? ')
+    if(sujo =='s'){
+    va_tomar_banho();
+}
+
+}
+
+//EXERCIOCIO
 /*
  1- Faça um programa, com uma função que necessite de três 
  argumentos: dois números e um sinal de 
@@ -257,6 +268,66 @@ console.log(`Voce quer o calculo de ${numero1} ${pede_perador} ${numero2} que é
 calculadora(numero1,pede_perador,numero2)
 */
 
+
+//RETURN ---- o return funciona como brak e armazena o dado, portanto ele para a execucao quando chega nele
+//serve para tirar o valor dentro da funcao
+/*
+function somar(a, b){
+    let soma = a + b;
+    return soma;
+}
+
+let resultado = somar(15, 20);
+console.log(resultado);
+
+*/
+
+
+
+function calculadora (num1, operador,num2){
+    let mais = num1 + num2;
+    let menos = num1 - num2;
+    let multiplicacao = num1 * num2;
+    let divisao = num1 / num2;
+    
+    if ( pede_perador == '+'){
+        operador = mais;
+        // console.log(operador)
+        return operador;
+    }
+    else if ( pede_perador == '-'){
+        operador = menos;
+        // console.log(operador)
+        return operador;
+    }
+    else if ( pede_perador == '*'){
+        operador = multiplicacao;
+        // console.log(operador)
+        return operador;
+    }
+    else if ( pede_perador == '/'){
+        operador = divisao;
+        // console.log(operador)
+        return operador;
+    }
+
+    // return operador;
+}
+
+let pede_perador = prompt('Digite o calculo a ser feito (+,-,*,/): ');
+let numero1 = +prompt('Digite o primeiro numero: ');
+let numero2 = +prompt('Digite o segundo numero: ');
+
+
+console.log(`Voce quer o calculo de ${numero1} ${pede_perador} ${numero2} que é igual a: `)
+// calculadora(numero1,pede_perador,numero2);
+
+let res = calculadora(numero1,pede_perador,numero2);
+
+console.log(res);
+
+
+
 /*
 2 - Construa uma função que receba uma data 
 no formato DD/MM/AAAA e devolva uma string no 
@@ -264,10 +335,81 @@ formato 'D de mesPorExtenso de AAAA'. Valide a data e
 retorne NULL caso a data seja inválida.
 */
 
-function dataform(dia,mes,ano){
+/*
+function dataform(dia, mes){
+    if (mes == 1){
+        mes == 'janeiro'
+    }
+    else if (mes == 2){
+        mes == 'febereiro'
+    }
+    else if (mes == 3){
+        mes == 'marco'
+    }
+    else if (mes == 4){
+        mes == 'abril'
+    }
+    else if (mes == 5){
+        mes == 'maio'
+    }
+    else if (mes == 6){
+        mes == 'junho'
+    }
+    else if (mes == 7){
+        mes == 'julho'
+    }
+    else if (mes == 8){
+        mes == 'agosto'
+    }
+    else if (mes == 9){
+        mes == 'setembro'
+    }
+    else if (mes == 10){
+        mes == 'outubro'
+    }
+    else if (mes == 11){
+        mes == 'novembro'
+    }
+    else if (mes == 12){
+        mes == 'dezembro'
+    }
+
+    if (dia > 30){
+        dia = null;
+    }
+
+    let
+}
+
+let pegaData = prompt('Digite a data no formato DD/MM/AAAA')
+*/
+
+//correcao do professor da 2:
+
+/*
+function escrevedata(data){
+    let dataSplit = data.split('/');*/
+    //teria que validar as datas (se dia maior que 30, mes maior que 12... etc)
+    //*estava comentada*console.log(`${dataSplit[0]} de ${dataSplit[1]} de ${dataSplit[2]} `)
+    /*
+    forma 2:
+    if (dataSplit[1] == 01){
+        dataSplit[1]= 'Janeiro';
+        console.log(`${dataSplit[0]} de ${dataSplit[1]} de ${dataSplit[2]} `)
+    }*/
+    /*
+    let mes = dataSplit[1];
+    let meses = ['Jan','Fev', 'Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+    console.log(`${dataSplit[0]} de ${meses[mes-1]} de ${dataSplit[2]}`)
 
 }
 
-let pegadia = +prompt('Digite o mes: ');
-let pegames = prompt('Digite mes: ');
-let pegaano = +prompt('Digite o ano: ');
+let pegaData = prompt('Digite a data no formato DD/MM/AAAA : ');
+escrevedata(pegaData);
+*/
+
+
+/*
+let data = '21/12/2021'
+dataSplit = data.split('/')
+console.log(dataSplit)*/
