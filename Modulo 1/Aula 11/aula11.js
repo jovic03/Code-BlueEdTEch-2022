@@ -220,13 +220,54 @@ saudacao(y);*/
  operador matemático (+, -, * ou /). Ela deve fazer o 
  cálculo indicado pelo operador usando os dois número 
  passados.
+*/
+
+/*
+function calculadora (num1, operador,num2){
+    let mais = num1 + num2;
+    let menos = num1 - num2;
+    let multiplicacao = num1 * num2;
+    let divisao = num1 / num2;
+    
+    if ( pede_perador == '+'){
+        operador = mais;
+        console.log(operador)
+    }
+    else if ( pede_perador == '-'){
+        operador = menos;
+        console.log(operador)
+    }
+    else if ( pede_perador == '*'){
+        operador = multiplicacao;
+        console.log(operador)
+    }
+    else if ( pede_perador == '/'){
+        operador = divisao;
+        console.log(operador)
+    }
+}
+
+let pede_perador = prompt('Digite o calculo a ser feito (+,-,*,/): ');
+let numero1 = +prompt('Digite o primeiro numero: ');
+let numero2 = +prompt('Digite o segundo numero: ');
 
 
+// console.log(`Voce quer o calculo de ${numero1} ${pede_perador} ${numero2} que é igual a `,calculadora(numero1,pede_perador,numero2))
+console.log(`Voce quer o calculo de ${numero1} ${pede_perador} ${numero2} que é igual a: `)
+calculadora(numero1,pede_perador,numero2)
+*/
 
-
-
+/*
 2 - Construa uma função que receba uma data 
 no formato DD/MM/AAAA e devolva uma string no 
 formato 'D de mesPorExtenso de AAAA'. Valide a data e 
 retorne NULL caso a data seja inválida.
 */
+
+function dataform(dia,mes,ano){
+
+}
+
+let pegadia = +prompt('Digite o mes: ');
+let pegames = prompt('Digite mes: ');
+let pegaano = +prompt('Digite o ano: ');
