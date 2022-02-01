@@ -175,7 +175,7 @@ saudacao(nome, nasc)
 //e nasc tem que ser o segundo tal qual ano é o 2º parametro
 
 
-
+/*
 function saudacao(a, b){
 	let idade = 2022 - b;
     console.log();
@@ -192,3 +192,41 @@ let x = prompt('Qual o seu nome? ');
 let y = prompt('Qual o seu ano de nascimento? ')
 
 saudacao(x,y)
+*/
+
+/*
+function saudacao(ano, nome = 'Aluno(a)'){//quando colcoar parametro pre definodo colcoar por ultimo
+	let idade = 2022 - ano;
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
+    if (idade >= 18){
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
+    console.log();
+}
+
+let x = prompt('Qual o seu nome? ');
+let y = prompt('Qual o seu ano de nascimento? ')
+
+// saudacao(y,x);
+saudacao(y);*/
+
+
+/*
+ 1- Faça um programa, com uma função que necessite de três 
+ argumentos: dois números e um sinal de 
+ operador matemático (+, -, * ou /). Ela deve fazer o 
+ cálculo indicado pelo operador usando os dois número 
+ passados.
+
+
+
+
+
+2 - Construa uma função que receba uma data 
+no formato DD/MM/AAAA e devolva uma string no 
+formato 'D de mesPorExtenso de AAAA'. Valide a data e 
+retorne NULL caso a data seja inválida.
+*/
