@@ -324,14 +324,22 @@ console.log(lista[0].idade);
 //parte 2 da aula minhas anotacoes
 //objeto:
 
+/*
 console.clear();
 
-let pessoa = [
-    {nome: 'Gabriel', idade: 18, cidade: 'londrina'},
-
-]   
+let pessoa = {
+    nome: 'Gabriel',
+    idade: 18, 
+    cidade: 'londrina'
+}
 
 console.log(pessoa)
+console.log(`O nome do objeto é ${pessoa}`)//nao funfa mas mostra que tudo é objetoi em java
+console.log(`O nome do objeto é ${pessoa.idade}`)//se eu colo a proprieade do objeto dai ele retorna o valor
+
+pessoa.idade = 21//alterei o valor do objeto agora
+
+console.log(`O nome do objeto é ${pessoa.idade}`)
 
 const cadastro = {
     nome: 'joao',
@@ -341,3 +349,38 @@ const cadastro = {
 }
 
 console.log(cadastro)
+*/
+
+
+//metodo
+/*
+console.clear();
+
+let pessoa = {
+    nome: 'Gabriel',
+    idade: 18, 
+    cidade: 'londrina',
+
+    biografia:function () {
+        console.log(`O nome é ${this.nome}, a idade ${this.idade} e cidade ${this.cidade}`)
+
+    },
+
+    // biografia:function (nome) {//nome recebe o pessoa.biografia('Polly') = no caso o Polly
+    //     console.log(`O nome é ${this.nome}, a idade ${this.idade} e cidade ${this.cidade} e namora a ${nome}`)
+
+    // }
+
+    envelhecer: function (a){
+        this.idade = this.idade + a;
+    }
+}
+// pessoa.biografia('Polly') //usado para exemplificar na linha 365
+
+pessoa.biografia();
+
+let anos = +prompt('Quantos anos ele vai envelhecer? ')
+pessoa.envelhecer(anos);
+
+pessoa.biografia();
+*/
