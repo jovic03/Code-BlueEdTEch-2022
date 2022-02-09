@@ -36,6 +36,7 @@ while(hora < 10){
 }
 */
 
+/*
 function dataHora(a){
 
     let hora = 4;
@@ -54,9 +55,44 @@ function dataHora(a){
 dataHora(a)
 dataHora()
 dataHora()
+*/
 
+let hora = 4;
+let dia = 1;
 
+//console.log(`São ${hora} h do dia ${dia}`);
+hora = hora + hora;
 
+if (dia >24){
+    dia = dia + 1;
+}
+
+let pgt1 = +prompt('pgt 1 ')
+
+if (pgt1 == true){
+    hora++;
+    console.log(`São ${hora} h do dia ${dia}`);
+}
+let pgt2 = +prompt('pgt 2 ')
+if (pgt2 == true){
+    hora++;
+    console.log(`São ${hora} h do dia ${dia}`);
+}
+let pgt3 = +prompt('pgt 3 ')
+if (pgt3 == true){
+    hora++;
+    console.log(`São ${hora} h do dia ${dia}`);
+}
+let pgt4 = +prompt('pgt 4 ')
+if (pgt4 == true){
+    hora++;
+    console.log(`São ${hora} h do dia ${dia}`);
+}
+let pgt5 = +prompt('pgt 5 ')
+if (pgt5 == true){
+    hora++;
+    console.log(`São ${hora} h do dia ${dia}`);
+}
 
 
 /*
