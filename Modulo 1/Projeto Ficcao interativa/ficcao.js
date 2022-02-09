@@ -29,37 +29,47 @@ const nomesPersonagens = [
 // let escolha = prompt('Escolha 1 ou 2?')
 
 
-function dataHora(){
+function dataHora(){//arrumar
     let hora = 4.5;
     let dia = 1;
     
     if (hora >24){
         dia++;
-
     }
-    console.log(`São ${hora} do dia ${dia}`)
+    
+    hora++;
+    console.log(`São ${hora}h do dia ${dia}`)
+
 }
 
 
 function fim(){
     console.log('FIM')
-    console.log(dataHora());
+    dataHora();
 }
 
 
 function testaEscolha(){
 
-    let escolha = +prompt('Escolha 1 ou 2?')
+    let escolha = +prompt('Escolha 1 ou 2? ')
+    while(escolha > 2 || escolha < 1 ){
 
-    while(escolha < 3 && escolha > 0 ){
-        console.log('Para escolher digite apenas 1 ou 2');
-
+        if(escolha > 2 || escolha < 1 ){
+                console.log('Para escolher digite apenas 1 ou 2');
+                escolha = +prompt('Digite apenas 1 ou 2: ');
+            }
     }
     
-} // arrumar, permitir somente digitar 1 ou 2
+    
+} 
+
+function Fnaleatorio(){
+    const aleatorio = Math.floor(Math.random() * 10);
+    console.log(aleatorio)
+}
 
 
-function pt1(){
+
     console.log('Você acaba de acordar de uma noite mal dormida como de costuma')
     console.log('Sua esposa, Ada Lovelace está com você na cama, e seu animal elétrico, a ovelha Dolly, está a porta.')
     console.log('Com que você interagir nesse despertar? ');
@@ -70,14 +80,16 @@ function pt1(){
         console.log('Você vai acariciar Dolly, mas ao levantar da cama Lovelace desperta');
         console.log('Como alguém que passa por um dia fúria ela pega o lustre que esta do seu lado da cama e em furia joga em sua direção!')
         
-        let aleatorio = Math.floor(Math.random() * 10);
-        if (aleatorio < 5){
+        
+        if (Fnaleatorio < 5){//
+                    Fnaleatorio();//apagar pois usr nao precisa---------
                     console.log('Ela o acerta na cabeça!');
                     console.log('Vocês dois entram em desespoero, ela num misto de arrependimento de ter feito e um desejo de que tivesse sido algo definitivo');
                     console.log('Tentam estancar o sangramento mas nada funciona... Seria esse momento onde toda sua fé depoisitada no vazio seria testada');
                     fim();
                     
                 } else {
+                    Fnaleatorio();
                     console.log('Ela erra, e no mesmo instante do mais amargo arrependimento de ter se rendido ao seu impulso, Lovelace grita "DESCULPA!!!", mas agora a fúria como um fogarel numa floresta, está ardendo sobre você.')
                     console.log('Você violentamente avança para cima de Lovelace.');
                     console.log('E enquanto se afastava de você ela se aproximava da janela do minusculo quarto.')
@@ -88,10 +100,29 @@ function pt1(){
                     fim();
                 }
     }
-    else if (esc1 == 1){//subsequancia
-        console.log('Narrativa longa')
+    else if (esc1 == 1){
+        dataHora();
+        console.log('Você beija Ada como quem está batendo ponto em um trabalho, na espectativa de que ao final do mês aquilo te recompense, que o futuro seja melhor que o agora');
+        console.log('Agora já desperto, você vai ao banheiro para jogar água no rosto.')
+        console.log('Lá enquanto vê todas as imperfeições física em seu rosto repara de canto algo na janela, mas ao mesmo tempo Ada babucia algo e diz seu nome.')
+        let esc2 = +prompt('Você vai falar com Ada (1) ou olha na janela (2) ? ');
+
+        if (esc2==2){
+            dataHora();
+            console.log('Você vai a janela, e lá vê que tem um pombo batendo asas parado no mesmo lugar...');
+            console.log('Parecia até mesmo um glitch de um jogo');
+            if(Fnaleatorio <4){
+                Fnaleatorio()
+            }
+            console.log('Mas que sentido faz isso... se nem o mais sujo dos animais decreptos não são reais...')
+            console.log('Será que vale mesmo ser Neo... tomar a pílula vermelha?')
+            console.log('A sua conclusão é que sem no o minimo pode ser de verdade, por que então deveria seguir fingindo que vale a pena?')
+            console.log('Ausente uma resposta a si mesmo mesmo você se lança pela janela, sem controle, como que um narrador um programador o fizesse fazer...')
+            console.log('E no contato com o chão, que certamente era real, você deixa de ser, seja o que for que você fosse antes')
+            fim();
+
+
+        }
 
     }
-}
 
-pt1();
