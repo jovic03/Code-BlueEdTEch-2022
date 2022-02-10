@@ -29,7 +29,7 @@ const nomesPersonagens = [
 // let escolha = prompt('Escolha 1 ou 2?')
 
 
-let hora = 2;
+let hora = 4;
 let dia = 1
 
 console.log(hora)
@@ -82,7 +82,7 @@ function Fnaleatorio(){
     let esc1 = +prompt('1 para acordar Lovelace com um beijo mórbido e 2 para ir acareciar seu ovelha: ');
     //testaEscolha();
 
-    if (esc1 == 2){//narrativa curta
+    if (esc1 == 2){//narrativa curta//Acordar acariciar animal eletrico
         console.log('Você vai acariciar Dolly, mas ao levantar da cama Lovelace desperta');
         console.log('Como alguém que passa por um dia fúria ela pega o lustre que esta do seu lado da cama e em furia joga em sua direção!')
         
@@ -106,15 +106,17 @@ function Fnaleatorio(){
                     fim();
                 }
     }
-    else if (esc1 == 1){
+    else if (esc1 == 1){//Acordar e dar um beijo na Ada Lovelace
         dataHora();
         console.log('Você beija Ada como quem está batendo ponto em um trabalho, na espectativa de que ao final do mês aquilo te recompense, que o futuro seja melhor que o agora');
         console.log('Agora já desperto, você vai ao banheiro para jogar água no rosto.')
         console.log('Lá enquanto vê todas as imperfeições física em seu rosto repara de canto algo na janela, mas ao mesmo tempo Ada babucia algo e diz seu nome.')
         let esc2 = +prompt('Você vai falar com Ada (1) ou olha na janela (2) ? ');
 
-        if (esc2==2){
+        if (esc2==2){//acordado/o pombo olha para voce e você nota que é um pombo mecânico
             dataHora();
+
+
             console.log('Você vai a janela, e lá vê que tem um pombo batendo asas parado no mesmo lugar...');
             console.log('Parecia até mesmo um glitch de um jogo');
             if(Fnaleatorio <4){
@@ -128,7 +130,40 @@ function Fnaleatorio(){
             fim();
 
 
+            }else if (Fnaleatorio>=5){//dormindo/ tenta acordar mas percebe que esta 
+                console.log('O pombo o encara de volta... mas o olha não como um animal preocupado em observar perigos, mas sim em como uma máquina que o sensor sente algo.')
+                console.log('Você então se lembra que nem mesmo pombos, o mais sujo dos animais decreptos não são reais...')
+                console.log('Pse... ser o principal da sua narratiava e sentir o mundo como NPC é o mais puro egocentrismo, mas é a única realidade possível a si.')
+                console.log('E ver esse pombo, esse maldito pombo, reforça que a vida já não vale como construção do real, pois o real se desfez em kg de ferro e cabos. ')
+                console.log(`Até mais disse ${nomesPersonagens[0]}`)
+                fim();
+            }
+        else if (esc2==1){//Ada cria diálogo sobre estar triste e se mostra dependente da caixa de empatia
+            console.log(`${nomesPersonagens[1]} se diz não triste, más melancólica, não sair do quarto é seu inferno, mas ela mesmo acha que não estar nele é o inferno pior que o de Dante`);
+            console.log(`E como um drogado fugindo do real, ${nomesPersonagens[1]} vai atrás de sua Caixa de Empatia`);
+            console.log(`Você odeia a maldita Caixa, já não basta o real ser artifical, quem dira um real propositalmente artificial...`)
+            console.log(`Ela te convida a usar dizendo que vai ser bom pra você, que é coisa de sua cabeça...`);
+            let esc3 = +prompt('Você aceita? (digite 1 para sim e 2 para não) ')
+            if(esc3== 1){//Aceita/Entram juntos, é descrito com funciona (descrição onirica e 
+                console.log(`Com a Caixa em mãos, ela pega os conectores e os coloca no corpo de ${nomesPersonagens[0]}. `);
+                console.log(`Ela, que tão raro quanto a ausencia de fumaça ficava feliz e empolgada, o ficou pois iria te apresentar o Oasis`);
+                console.log(`Você conecta todos os aparatos em seus devidos lugares`);
+                console.log(`${nomesPersonagens[1]} surpreendentemente segura na sua mão, demonstra um sorriso de felicidade e aprta a máquina...`);
+                console.log(`...`);
+                console.log(`...`);
+                console.log(`...`);
+                console.log(`O tempo já não faz sentido após o pressionar de botão... podem ter passado segundos, podem ter passados horas...mas para você não importa`);
+                console.log(`A única sensação foi um amargo, um flash nos olhos totalmente kubrickianos e o reflexo de desativar a máquina`);
+                console.log(`Ada se enfurece e entristece ao mesmo tempo, e você fica indiferente a ela e você vai para o trabalho`);
+                
+                
+            }if(esc3==2){//Não aceitam/Tem uma briga/
+                console.log(`Diz que não é um viciado, que somente pessoas baratas se poem a utilizar esta maldita Caixa de Empatia`);
+                console.log('Você para o trabalho')
+            }
+            //*******como vou fazer para 2 caminhos disitintos se conectarem????*******************/ 
+            //chamar um function e continuar a partir dela??
+            //function "continua_historia() ?""   
         }
-
     }
 
