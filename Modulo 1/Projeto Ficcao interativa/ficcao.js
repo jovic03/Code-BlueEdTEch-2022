@@ -29,16 +29,22 @@ const nomesPersonagens = [
 // let escolha = prompt('Escolha 1 ou 2?')
 
 
-function dataHora(){//arrumar
-    let hora = 4.5;
-    let dia = 1;
-    
-    if (hora >24){
-        dia++;
+let hora = 2;
+let dia = 1
+
+console.log(hora)
+
+
+function dataHora(){
+
+    hora =hora + 4;
+
+    if (hora >= 24){
+        dia = dia + 1;
+        hora = hora - 24
     }
-    
-    hora++;
-    console.log(`São ${hora}h do dia ${dia}`)
+
+    console.log(`São ${hora} h do dia ${dia}`);
 
 }
 
