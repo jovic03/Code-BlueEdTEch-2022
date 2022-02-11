@@ -220,11 +220,37 @@ function royBattyVengance(){
             let esc4= +prompt(`Quem você vai atrás? Digite 1 para ${nomesPersonagens[4]} e 2 para ${nomesPersonagens[5]}: `);
             if (esc4==1){//Pris Stratton/Byrant te diz que documentos indicam seu paradeiro nas Rua Donald Knuth
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dela na Rua Donald Knuth ou Rua Grace Murray Hopper. Porém você também queria ir na loja de animais elétricos ver as novidades `);
-                //completar
+                let esc5 = +prompt('Para qual você vai? Digite 1 para Rua Donald Knuth, 2 para Rua Grace Murray ou 3 para loja de animais');
+                if (esc5==1){//Rua donald knuth
+                    console.log('Você encontra Pris numa vitrine de uma loja de animais, ela está encantada tal qual uma criança vendo um desenho animado');
+                    console.log('Você atira nela!')
+                    androideMorre();
+                }
+                if (esc5==2){//rua grace murray
+                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
+                    console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
+                    lojaDeAnimais();
+                }
+                if (esc5==3){//loja de animais
+                    lojaDeAnimais();
+                }
             }
             else if(esc4==2){//J.F. Sebastian /Byrant te diz que documentos indicam seu paradeiro nas Rua Vint
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dele na Rua Vint Cerf ou Rua Tim Berners-Lee. Porém você também queria ir na loja de animais elétricos ver as novidades`);
-                //completar
+                let esc6 = +prompt('Para qual você vai? Digite 1 para Rua Vint Cerf, 2 para Rua Tim Berners-Lee ou 3 para loja de animais');
+                if (esc6==1){//Rua Vint Cerf
+                    console.log('Você encontra J.F. numa vitrine de uma loja de animais, ele está encantada tal qual uma criança vendo um desenho animado, toda sua pose de durão até se desfaz');
+                    console.log('Você atira nele!')
+                    androideMorre();
+                }
+                if (esc6==2){//Rua Tim Berners-Lee
+                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
+                    console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
+                    lojaDeAnimais();
+                }
+                if (esc6==3){//loja de animais
+                    lojaDeAnimais();
+                }
             }
         }
     }
