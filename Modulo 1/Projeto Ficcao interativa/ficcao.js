@@ -85,8 +85,7 @@ function androideMorre(){//atira/leva o corpo para a delegacia para confirmar
 }
 
 function missaoFail(){
-    console.log(`Você consegue, porém a fuga seu adversário foge.`);
-    console.log(`Frustrado você no maldito hovercar para casa`);
+    console.log(`Frustrado você vai para a casa em seu maldito hovercar`);
     console.log(`Chegando em casa ${nomesPersonagens[2]} liga no seu Vidfone e pergunta status da missão.`);
     console.log(`Você sem frustração alguma em função da anestesia de sentintos que é diz que não teve sucesso `);
     console.log(`${nomesPersonagens[2]} diz que tudo bem, que a horas desses androides chegaria...`);
@@ -112,14 +111,15 @@ function missaoFail(){
     }
 }
 
-function lojaDeAnimais(){
+function lojaDeAnimais(){//na loja de animais fica irado com os
     console.log(`Você vai para loja de animais elétricos e olha pela vitrine.`);
     console.log(`Olhando isso você sente um misto de felicidade de ver esses animais e lembrar que o mundo já habitou essas belas criaturas, mas ao mesmo tempo fica triste por eles não existirem mais`);
     missaoFail();
 }
 
-function androideFoge(){
-    console.log(``)
+function androideFoge(){//prende ou *acena/vai para prende-la, porem
+    console.log(`Que descuido... que descuido... É claro que a fuga de seu inimigo se materializa junto a sua frustração... É evidente`);
+    missaoFail();
 }
 
 function royBattyVengance(){
@@ -218,17 +218,14 @@ function royBattyVengance(){
             console.log(`A primeira é ${nomesPersonagens[4]}, uma adroide com "espirito" selvagem, cintilante como Cyndi Lauper nos anos 80 `);
             console.log(`O outro é ${nomesPersonagens[5]} um androide com aspirações a ser um Terminator no primeiro filme, metódico e de poucas palavras.`);
             let esc4= +prompt(`Quem você vai atrás? Digite 1 para ${nomesPersonagens[4]} e 2 para ${nomesPersonagens[5]}: `);
-            if (esc4==1){
+            if (esc4==1){//Pris Stratton/Byrant te diz que documentos indicam seu paradeiro nas Rua Donald Knuth
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dela na Rua Donald Knuth ou Rua Grace Murray Hopper. Porém você também queria ir na loja de animais elétricos ver as novidades `);
-
+                //completar
             }
-            else if(esc4==2){
+            else if(esc4==2){//J.F. Sebastian /Byrant te diz que documentos indicam seu paradeiro nas Rua Vint
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dele na Rua Vint Cerf ou Rua Tim Berners-Lee. Porém você também queria ir na loja de animais elétricos ver as novidades`);
+                //completar
             }
-
-            //*******como vou fazer para 2 caminhos disitintos se conectarem????*******************/ 
-            //chamar um function e continuar a partir dela??
-            //function "continua_historia() ?""   
         }
     }
 
