@@ -76,7 +76,7 @@ function Fnaleatorio(){
 
 
 
-function androideMorre(){
+function androideMorre(){//atira/leva o corpo para a delegacia para confirmar
     console.log(`Você acerta o tiro e a mata!`);
     console.log(`Leva o corpo até a delegacia para receber sua recompensa na esperança de que aquele dinheiro se transforme em algo que preencha seu existir.`);
     console.log(`Mas o inesperado ocorre:`);
@@ -109,20 +109,22 @@ function missaoFail(){
         console.log(`Você atende e lá o ${nomesPersonagens[2]} diz que ${nomesPersonagens[3]},${nomesPersonagens[4]} e ${nomesPersonagens[5]} estão em um prédio abandonado no centro da cidade.`);
         console.log(`Você vai imediatamente para lá, porém chegando lá é pego de surpresa pelos 3!`)
         royBattyVengance();
-        fim();
     }
 }
 
 function lojaDeAnimais(){
-
+    console.log(`Você vai para loja de animais elétricos e olha pela vitrine.`);
+    console.log(`Olhando isso você sente um misto de felicidade de ver esses animais e lembrar que o mundo já habitou essas belas criaturas, mas ao mesmo tempo fica triste por eles não existirem mais`);
+    missaoFail();
 }
 
 function androideFoge(){
-
+    console.log(``)
 }
 
 function royBattyVengance(){
-
+    
+    fim();
 }
 
 
