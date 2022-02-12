@@ -51,7 +51,7 @@ function dataHora(){
 
 function fim(){
     console.log('FIM')
-    dataHora();
+    //dataHora();//nao colocar data hora
 }
 
 
@@ -77,6 +77,7 @@ function Fnaleatorio(){
 
 
 function androideMorre(){//atira/leva o corpo para a delegacia para confirmar
+    dataHora()
     console.log(`Você acerta o tiro e a mata!`);
     console.log(`Leva o corpo até a delegacia para receber sua recompensa na esperança de que aquele dinheiro se transforme em algo que preencha seu existir.`);
     console.log(`Mas o inesperado ocorre:`);
@@ -85,6 +86,7 @@ function androideMorre(){//atira/leva o corpo para a delegacia para confirmar
 }
 
 function missaoFail(){
+    dataHora()
     console.log(`Frustrado você vai para a casa em seu maldito hovercar`);
     console.log(`Chegando em casa ${nomesPersonagens[2]} liga no seu Vidfone e pergunta status da missão.`);
     console.log(`Você sem frustração alguma em função da anestesia de sentintos que é diz que não teve sucesso `);
@@ -103,27 +105,42 @@ function missaoFail(){
     }
     else if(escEmpatiaBox==2){
         //nao
+        dataHora()
         console.log(`Você diz para ela que não, que se ela quer ser tolam que seja solo...`);
         console.log(`Vai descansar, descansa por algumas horas, porém seu vidfone toca no modo emergência`);
         console.log(`Você atende e lá o ${nomesPersonagens[2]} diz que ${nomesPersonagens[3]},${nomesPersonagens[4]} e ${nomesPersonagens[5]} estão em um prédio abandonado no centro da cidade.`);
-        console.log(`Você vai imediatamente para lá, porém chegando lá é pego de surpresa pelos 3!`)
+        console.log(`Você vai imediatamente para lá, porém chegando lá...!`)
         royBattyVengance();
     }
 }
 
 function lojaDeAnimais(){//na loja de animais fica irado com os
+    dataHora()
     console.log(`Você vai para loja de animais elétricos e olha pela vitrine.`);
     console.log(`Olhando isso você sente um misto de felicidade de ver esses animais e lembrar que o mundo já habitou essas belas criaturas, mas ao mesmo tempo fica triste por eles não existirem mais`);
     missaoFail();
 }
 
 function androideFoge(){//prende ou *acena/vai para prende-la, porem
+    dataHora()
     console.log(`Que descuido... que descuido... É claro que a fuga de seu inimigo se materializa junto a sua frustração... É evidente`);
     missaoFail();
 }
 
 function royBattyVengance(){
-    
+    dataHora()
+    console.log(`${nomesPersonagens[3]} te pega de surpresa!`);
+    console.log(`Ele discursa sobre o quão miserável vocês humanos são... O quão apaixonado pelo vazio vocês, mesmo tendo tudo... Enquanto ele como androide... Ele...`);
+    console.log(`Ele diz`);
+    console.log(`"Eu vi coisas que vocês pessoas não acreditariam... Naves de ataque em chamas ao largo de Órion. Eu vi raios-c brilharem na escuridão próximos ao Portal de Tannhäuser [...] "`);
+    console.log(`[...]"Todos esses momentos se perderão no tempo, como lágrimas na chuva. Hora de morrer."`);
+    console.log(`E após esse diálogo ele o empurra para o chão, com a arma em suas mãos, um sorriso no rosto, lágrimas misturada com a chuva em seus olhos e desejo de vingança no coração e...`);
+    for (let i = 0; i < 3; i++) {
+        console.log('...');
+    }
+    console.log('BOOOOOOOOM')
+    console.log('Nesse jogo de ter coisas em algo, você é quem tem no seu ultimo momento esse booom.');
+    console.log('Lagrimas... na ... ch...')    
     fim();
 }
 
@@ -135,6 +152,7 @@ function royBattyVengance(){
     //testaEscolha();
 
     if (esc1 == 2){//narrativa curta//Acordar acariciar animal eletrico
+        dataHora()
         console.log('Você vai acariciar Dolly, mas ao levantar da cama Lovelace desperta');
         console.log('Como alguém que passa por um dia fúria ela pega o lustre que esta do seu lado da cama e em furia joga em sua direção!');
         
@@ -166,9 +184,6 @@ function royBattyVengance(){
         let esc2 = +prompt('Você vai falar com Ada (1) ou olha na janela (2) ? ');
 
         if (esc2==2){//acordado/o pombo olha para voce e você nota que é um pombo mecânico
-            dataHora();
-
-
             console.log('Você vai a janela, e lá vê que tem um pombo batendo asas parado no mesmo lugar...');
             console.log('Parecia até mesmo um glitch de um jogo');
             if(Fnaleatorio <4){
@@ -201,9 +216,9 @@ function royBattyVengance(){
                 console.log(`Ela, que tão raro quanto a ausencia de fumaça ficava feliz e empolgada, o ficou pois iria te apresentar o Oasis`);
                 console.log(`Você conecta todos os aparatos em seus devidos lugares`);
                 console.log(`${nomesPersonagens[1]} surpreendentemente segura na sua mão, demonstra um sorriso de felicidade e aprta a máquina...`);
-                console.log(`...`);
-                console.log(`...`);
-                console.log(`...`);
+                for (let i = 0; i < 3; i++) {
+                    console.log('...');
+                }
                 console.log(`O tempo já não faz sentido após o pressionar de botão... podem ter passado segundos, podem ter passados horas...mas para você não importa`);
                 console.log(`A única sensação foi um amargo, um flash nos olhos totalmente kubrickianos e o reflexo de desativar a máquina`);
                 console.log(`Ada se enfurece e entristece ao mesmo tempo, e você fica indiferente a ela e você vai para o trabalho`);
@@ -213,42 +228,50 @@ function royBattyVengance(){
                 console.log(`Diz que não é um viciado, que somente pessoas baratas se poem a utilizar esta maldita Caixa de Empatia`);
                 console.log('Você para o trabalho');
             }
-
+            dataHora();
             console.log(`Chegando no trabalho no trabalho seu chefe,${nomesPersonagens[2]} te passa uma missão para ir atrás de dois androides.`);
             console.log(`A primeira é ${nomesPersonagens[4]}, uma adroide com "espirito" selvagem, cintilante como Cyndi Lauper nos anos 80 `);
             console.log(`O outro é ${nomesPersonagens[5]} um androide com aspirações a ser um Terminator no primeiro filme, metódico e de poucas palavras.`);
             let esc4= +prompt(`Quem você vai atrás? Digite 1 para ${nomesPersonagens[4]} e 2 para ${nomesPersonagens[5]}: `);
             if (esc4==1){//Pris Stratton/Byrant te diz que documentos indicam seu paradeiro nas Rua Donald Knuth
+                dataHora();
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dela na Rua Donald Knuth ou Rua Grace Murray Hopper. Porém você também queria ir na loja de animais elétricos ver as novidades `);
-                let esc5 = +prompt('Para qual você vai? Digite 1 para Rua Donald Knuth, 2 para Rua Grace Murray ou 3 para loja de animais');
+                let esc5 = +prompt('Para qual você vai? Digite 1 para Rua Donald Knuth, 2 para Rua Grace Murray ou 3 para loja de animais: ');
                 if (esc5==1){//Rua donald knuth
+                    dataHora();
                     console.log('Você encontra Pris numa vitrine de uma loja de animais, ela está encantada tal qual uma criança vendo um desenho animado');
                     console.log('Você atira nela!')
                     androideMorre();
                 }
                 if (esc5==2){//rua grace murray
+                    dataHora();
                     console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
                 if (esc5==3){//loja de animais
+                    dataHora();
                     lojaDeAnimais();
                 }
             }
             else if(esc4==2){//J.F. Sebastian /Byrant te diz que documentos indicam seu paradeiro nas Rua Vint
+                dataHora();
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dele na Rua Vint Cerf ou Rua Tim Berners-Lee. Porém você também queria ir na loja de animais elétricos ver as novidades`);
-                let esc6 = +prompt('Para qual você vai? Digite 1 para Rua Vint Cerf, 2 para Rua Tim Berners-Lee ou 3 para loja de animais');
+                let esc6 = +prompt('Para qual você vai? Digite 1 para Rua Vint Cerf, 2 para Rua Tim Berners-Lee ou 3 para loja de animais: ');
                 if (esc6==1){//Rua Vint Cerf
+                    dataHora();
                     console.log('Você encontra J.F. numa vitrine de uma loja de animais, ele está encantada tal qual uma criança vendo um desenho animado, toda sua pose de durão até se desfaz');
                     console.log('Você atira nele!')
                     androideMorre();
                 }
                 if (esc6==2){//Rua Tim Berners-Lee
+                    dataHora();
                     console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
                 if (esc6==3){//loja de animais
+                    dataHora();
                     lojaDeAnimais();
                 }
             }
