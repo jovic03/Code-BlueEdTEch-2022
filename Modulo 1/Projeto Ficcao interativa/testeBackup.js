@@ -198,7 +198,6 @@ do{
     console.log('Você acaba de acordar de uma noite mal dormida como de costuma');
     console.log('Sua esposa, Ada Lovelace está com você na cama, e seu animal elétrico, a ovelha Dolly, está a porta.');
     console.log('Com que você interagir nesse despertar? ');
-
     let esc1 = +prompt('1 para acordar Lovelace com um beijo mórbido e 2 para ir acareciar seu ovelha: ');
     if (testaEscolha_2(esc1) == 2){//narrativa curta//Acordar acariciar animal eletrico
         console.log('************');
@@ -229,11 +228,11 @@ do{
             }
     }
     else{
-        //else if (testaEscolha_2(esc1) == 1){//Acordar e dar um beijo na Ada Lovelace
-        console.log('************');
-        dataHora();
-        console.log('************');
-        console.log('');
+    //else if (testaEscolha_2(esc1) == 1){//Acordar e dar um beijo na Ada Lovelace
+    console.log('************');
+    dataHora();
+    console.log('************');
+    console.log('');
         humor.felicidade=12;
         console.log('************');
         console.log(`Sua felicidade está em ${humor.felicidade}`)
@@ -242,7 +241,6 @@ do{
         console.log('Você beija Ada como quem está batendo ponto em um trabalho, na espectativa de que ao final do mês aquilo te recompense, que o futuro seja melhor que o agora');
         console.log('Agora já desperto, você vai ao banheiro para jogar água no rosto.');
         console.log('Lá enquanto vê todas as imperfeições física em seu rosto repara de canto algo na janela, mas ao mesmo tempo Ada babucia algo e diz seu nome.');
-
         let esc2 = +prompt('Você vai falar com Ada (1) ou olha na janela (2) ? ');
         if (testaEscolha_2(esc2)==2){//acordado/o pombo olha para voce e você nota que é um pombo mecânico
             console.log('');
@@ -257,6 +255,7 @@ do{
             console.log('Ausente uma resposta a si mesmo mesmo você se lança pela janela, sem controle, como que um narrador um programador o fizesse fazer...');
             console.log('E no contato com o chão, que certamente era real, você deixa de ser, seja o que for que você fosse antes');
             fim();
+
 
             }else if (Fnaleatorio>=5){//dormindo/ tenta acordar mas percebe que esta 
                 console.log('O pombo o encara de volta... mas o olha não como um animal preocupado em observar perigos, mas sim em como uma máquina que o sensor sente algo.');
@@ -277,7 +276,6 @@ do{
             console.log('');
             console.log(`Você odeia a maldita Caixa, já não basta o real ser artifical, quem dira um real propositalmente artificial...`);
             console.log(`Ela te convida a usar dizendo que vai ser bom pra você, que é coisa de sua cabeça...`);
-
             let esc3 = +prompt('Você aceita? (digite 1 para sim e 2 para não) ');
             if(testaEscolha_2(esc3)== 1){//Aceita/Entram juntos, é descrito com funciona (descrição onirica e 
                 console.log('');
@@ -296,6 +294,7 @@ do{
                 console.log(`Sua felicidade está em ${humor.felicidade}`)
                 console.log('************');
                 console.log('');
+                
                 
             }else{
             //else if(testaEscolha_2(esc3)==2){//Não aceitam/Tem uma briga/
@@ -318,16 +317,16 @@ do{
             console.log(`Chegando no trabalho no trabalho seu chefe,${nomesPersonagens[2]} te passa uma missão para ir atrás de dois androides.`);
             console.log(`A primeira é ${nomesPersonagens[4]}, uma adroide com "espirito" selvagem, cintilante como Cyndi Lauper nos anos 80 `);
             console.log(`O outro é ${nomesPersonagens[5]} um androide com aspirações a ser um Terminator no primeiro filme, metódico e de poucas palavras.`);
-
             let esc4= +prompt(`Quem você vai atrás? Digite 1 para ${nomesPersonagens[4]} e 2 para ${nomesPersonagens[5]}: `);
+            //testaEscolha_2(esc4);//TESTE DOS LEK
             if (testaEscolha_2(esc4)==1){//Pris Stratton/Byrant te diz que documentos indicam seu paradeiro nas Rua Donald Knuth
                 console.log('************');
                 dataHora();
                 console.log('************');
                 console.log('');
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dela na Rua Donald Knuth ou Rua Grace Murray Hopper. Porém você também queria ir na loja de animais elétricos ver as novidades `);
-
                 let esc5 = +prompt('Para qual você vai? Digite 1 para Rua Donald Knuth, 2 para Rua Grace Murray ou 3 para loja de animais: ');
+                //testaEscolha_3(esc5) //teste de lek
                 if (testaEscolha_3(esc5)==1){//Rua donald knuth
                     console.log('************');
                     dataHora();
@@ -360,7 +359,6 @@ do{
             console.log('************');
             console.log('');
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dele na Rua Vint Cerf ou Rua Tim Berners-Lee. Porém você também queria ir na loja de animais elétricos ver as novidades`);
-
                 let esc6 = +prompt('Para qual você vai? Digite 1 para Rua Vint Cerf, 2 para Rua Tim Berners-Lee ou 3 para loja de animais: ');
                 //testaEscolha_3(esc6);//TESTE DOS LEK
                 if (testaEscolha_3(esc6)==1){//Rua Vint Cerf
