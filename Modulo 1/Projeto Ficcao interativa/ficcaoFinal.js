@@ -1,19 +1,19 @@
 const prompt = require('prompt-sync')();
 
-
+console.log('');
 console.log('O ano é 2019, seu nome é Rick Deckard');
 console.log('A fumaça é a realidade estética do momento, é a fuamaça que vem das fábricas, é a fumaça do cigarro, é a fumaça do hovercar, é a fumaça da pomba artifical que se espatifou na selva de prédios');
-console.log('Você é um caçador de androides que trabalha para a polícia de Los Angeles, seu chefe, o Capitão Byrant, sabe que você vai fazer o necessário para terminar seu trabalho')
-console.log('Sua esposa, a esguia de cabelos curtos negros, batizada de Ada Lovelace, dorme feito um anjo, mas acordada é tão vívida quanto um zombi.')
-console.log('Você não caça androides por esporte, tampouco porque por algum principio moral... Você só quer que no fim do dia a promessa de dinheiro seja cumprida, e você sabe que é bom no que faz.')
-console.log('E o que você faz? Bom você caça esses androides fugitivos das colônias de marte que se rebelaram e vieram para esse pseudo lugar que chamam de Terra.')
+console.log('Você é um caçador de androides que trabalha para a polícia de Los Angeles, seu chefe, o Capitão Byrant, sabe que você vai fazer o necessário para terminar seu trabalho');
+console.log('Sua esposa, a esguia de cabelos curtos negros, batizada de Ada Lovelace, dorme feito um anjo, mas acordada é tão vívida quanto um zombi.');
+console.log('Você não caça androides por esporte, tampouco porque por algum principio moral... Você só quer que no fim do dia a promessa de dinheiro seja cumprida, e você sabe que é bom no que faz.');
+console.log('E o que você faz? Bom você caça esses androides fugitivos das colônias de marte que se rebelaram e vieram para esse pseudo lugar que chamam de Terra.');
 console.log('Roy Batty, Priss Stratton e J.F. Sebastion são os fugitivos do momento, os rockstar que estampam os joarnais, os artistas que estão na chamadas de busca da televisão... Ou ao menos foi isso que me disseram...');
-console.log('*****************************************************************************************************************************************************************************************************************')
-console.log('*****************************************************************************************************************************************************************************************************************')
+console.log('*****************************************************************************************************************************************************************************************************************');
+console.log('*****************************************************************************************************************************************************************************************************************');
 console.log('Androides sonham com ovelhas elétricas?');
-console.log('*****************************************************************************************************************************************************************************************************************')
-console.log('*****************************************************************************************************************************************************************************************************************')
-console.log()
+console.log('*****************************************************************************************************************************************************************************************************************');
+console.log('*****************************************************************************************************************************************************************************************************************');
+console.log();
 
 
 
@@ -65,7 +65,7 @@ function dataHora(){
 
 
 function fim(){
-    console.log('FIM')
+    console.log('FIM');
     //dataHora();//nao colocar data hora
 }
 
@@ -149,7 +149,7 @@ function missaoFail(){
         console.log(`Você diz para ela que não, que se ela quer ser tolam que seja solo...`);
         console.log(`Vai descansar, descansa por algumas horas, porém seu vidfone toca no modo emergência`);
         console.log(`Você atende e lá o ${nomesPersonagens[2]} diz que ${nomesPersonagens[3]},${nomesPersonagens[4]} e ${nomesPersonagens[5]} estão em um prédio abandonado no centro da cidade.`);
-        console.log(`Você vai imediatamente para lá, porém chegando lá...!`)
+        console.log(`Você vai imediatamente para lá, porém chegando lá...!`);
         royBattyVengance();
     }
 }
@@ -186,7 +186,7 @@ function royBattyVengance(){
     }
     console.log('BOOOOOOOOM')
     console.log('Nesse jogo de ter coisas em algo, você é quem tem no seu ultimo momento esse booom.');
-    console.log('Lagrimas... na ... ch...')    
+    console.log('Lagrimas... na ... ch...');
     fim();
 }
 
@@ -206,7 +206,7 @@ do{
         console.log('************');
         console.log('');
         humor.felicidade=20;
-        console.log(`Sua felicidade está em ${humor.felicidade}`)
+        console.log(`Sua felicidade está em ${humor.felicidade}`);
         console.log('Você vai acariciar Dolly, mas ao levantar da cama Lovelace desperta');
         console.log('Como alguém que passa por um dia fúria ela pega o lustre que esta do seu lado da cama e em furia joga em sua direção!');
         
@@ -263,7 +263,7 @@ do{
                 console.log('Você então se lembra que nem mesmo pombos, o mais sujo dos animais decreptos não são reais...');
                 console.log('Pse... ser o principal da sua narratiava e sentir o mundo como NPC é o mais puro egocentrismo, mas é a única realidade possível a si.');
                 console.log('E ver esse pombo, esse maldito pombo, reforça que a vida já não vale como construção do real, pois o real se desfez em kg de ferro e cabos. ');
-                console.log(`Até mais disse ${nomesPersonagens[0]}`)
+                console.log(`Até mais disse ${nomesPersonagens[0]}`);
                 fim();
             }
          else{   
@@ -334,13 +334,13 @@ do{
                     console.log('************');
                     console.log('');
                     console.log('Você encontra Pris numa vitrine de uma loja de animais, ela está encantada tal qual uma criança vendo um desenho animado');
-                    console.log('Você atira nela!')
+                    console.log('Você atira nela!');
                     androideMorre();
                 }
                 //else{
                 else if (testaEscolha_3(esc5)==2){//rua grace murray
                     dataHora();
-                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
+                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.');
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
@@ -369,7 +369,7 @@ do{
                     console.log('************');
                     console.log('');
                     console.log('Você encontra J.F. numa vitrine de uma loja de animais, ele está encantada tal qual uma criança vendo um desenho animado, toda sua pose de durão até se desfaz');
-                    console.log('Você atira nele!')
+                    console.log('Você atira nele!');
                     androideMorre();
                 }
                 else if (testaEscolha_3(esc6)==2){//Rua Tim Berners-Lee
@@ -377,7 +377,7 @@ do{
                     dataHora();
                     console.log('************');
                     console.log('');
-                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
+                    console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.');
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
@@ -394,8 +394,8 @@ do{
         }
         console.log('');
         console.log('');
-        jogo = prompt('Quer jogar de novo? ')
+        jogo = prompt('Quer jogar de novo? ');
     }
-    while (jogo == 's')
+    while (jogo.toLocaleLowerCase() == 's');
 
 
