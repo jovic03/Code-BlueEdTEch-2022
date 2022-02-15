@@ -135,11 +135,11 @@ function lojaDeAnimais(){//na loja de animais fica irado com os
     missaoFail();
 }
 
-function androideFoge(){//prende ou *acena/vai para prende-la, porem
+/*function androideFoge(){//prende ou *acena/vai para prende-la, porem
     dataHora()
     console.log(`Que descuido... que descuido... É claro que a fuga de seu inimigo se materializa junto a sua frustração... É evidente`);
     missaoFail();
-}
+}*/
 
 function royBattyVengance(){
     dataHora()
@@ -159,12 +159,14 @@ function royBattyVengance(){
 }
 
 
+        //HISTORIA COMECA AQUI
+
     console.log('Você acaba de acordar de uma noite mal dormida como de costuma');
     console.log('Sua esposa, Ada Lovelace está com você na cama, e seu animal elétrico, a ovelha Dolly, está a porta.');
     console.log('Com que você interagir nesse despertar? ');
     let esc1 = +prompt('1 para acordar Lovelace com um beijo mórbido e 2 para ir acareciar seu ovelha: ');
     //testaEscolha();
-
+    //testaEscolha_2(esc1);//TESTE DOS LEK
     if (testaEscolha_2(esc1) == 2){//narrativa curta//Acordar acariciar animal eletrico
         dataHora()
         console.log('Você vai acariciar Dolly, mas ao levantar da cama Lovelace desperta');
@@ -196,7 +198,7 @@ function royBattyVengance(){
         console.log('Agora já desperto, você vai ao banheiro para jogar água no rosto.');
         console.log('Lá enquanto vê todas as imperfeições física em seu rosto repara de canto algo na janela, mas ao mesmo tempo Ada babucia algo e diz seu nome.');
         let esc2 = +prompt('Você vai falar com Ada (1) ou olha na janela (2) ? ');
-
+        //testaEscolha_2(esc2);TESTE DOS LEK
         if (testaEscolha_2(esc2)==2){//acordado/o pombo olha para voce e você nota que é um pombo mecânico
             console.log('Você vai a janela, e lá vê que tem um pombo batendo asas parado no mesmo lugar...');
             console.log('Parecia até mesmo um glitch de um jogo');
@@ -225,7 +227,7 @@ function royBattyVengance(){
             console.log(`Você odeia a maldita Caixa, já não basta o real ser artifical, quem dira um real propositalmente artificial...`);
             console.log(`Ela te convida a usar dizendo que vai ser bom pra você, que é coisa de sua cabeça...`);
             let esc3 = +prompt('Você aceita? (digite 1 para sim e 2 para não) ');
-            
+            //testaEscolha_2(esc3);//TESTE DOS LEK
             if(testaEscolha_2(esc3)== 1){//Aceita/Entram juntos, é descrito com funciona (descrição onirica e 
                 console.log(`Com a Caixa em mãos, ela pega os conectores e os coloca no corpo de ${nomesPersonagens[0]}. `);
                 console.log(`Ela, que tão raro quanto a ausencia de fumaça ficava feliz e empolgada, o ficou pois iria te apresentar o Oasis`);
@@ -239,7 +241,7 @@ function royBattyVengance(){
                 console.log(`Ada se enfurece e entristece ao mesmo tempo, e você fica indiferente a ela e você vai para o trabalho`);
                 
                 
-            }if(testaEscolha_2(esc3)==2){//Não aceitam/Tem uma briga/
+            }else if(testaEscolha_2(esc3)==2){//Não aceitam/Tem uma briga/
                 console.log(`Diz que não é um viciado, que somente pessoas baratas se poem a utilizar esta maldita Caixa de Empatia`);
                 console.log('Você para o trabalho');
             }
@@ -248,44 +250,47 @@ function royBattyVengance(){
             console.log(`A primeira é ${nomesPersonagens[4]}, uma adroide com "espirito" selvagem, cintilante como Cyndi Lauper nos anos 80 `);
             console.log(`O outro é ${nomesPersonagens[5]} um androide com aspirações a ser um Terminator no primeiro filme, metódico e de poucas palavras.`);
             let esc4= +prompt(`Quem você vai atrás? Digite 1 para ${nomesPersonagens[4]} e 2 para ${nomesPersonagens[5]}: `);
+            //testaEscolha_2(esc4);//TESTE DOS LEK
             if (testaEscolha_2(esc4)==1){//Pris Stratton/Byrant te diz que documentos indicam seu paradeiro nas Rua Donald Knuth
                 dataHora();
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dela na Rua Donald Knuth ou Rua Grace Murray Hopper. Porém você também queria ir na loja de animais elétricos ver as novidades `);
                 let esc5 = +prompt('Para qual você vai? Digite 1 para Rua Donald Knuth, 2 para Rua Grace Murray ou 3 para loja de animais: ');
+                //testaEscolha_3(esc5) //teste de lek
                 if (testaEscolha_3(esc5)==1){//Rua donald knuth
                     dataHora();
                     console.log('Você encontra Pris numa vitrine de uma loja de animais, ela está encantada tal qual uma criança vendo um desenho animado');
                     console.log('Você atira nela!')
                     androideMorre();
                 }
-                if (testaEscolha_3(esc5)==2){//rua grace murray
+                else if (testaEscolha_3(esc5)==2){//rua grace murray
                     dataHora();
                     console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
-                if (testaEscolha_3(esc5)==3){//loja de animais
+                else if (testaEscolha_3(esc5)==3){//loja de animais
                     dataHora();
                     lojaDeAnimais();
                 }
             }
-            else if(testaEscolha_2(esc4)==2){//J.F. Sebastian /Byrant te diz que documentos indicam seu paradeiro nas Rua Vint
+            else if(esc4==2){//J.F. Sebastian /Byrant te diz que documentos indicam seu paradeiro nas Rua Vint
                 dataHora();
                 console.log(`${nomesPersonagens[2]} te diz que documentos indicam o paradeiro dele na Rua Vint Cerf ou Rua Tim Berners-Lee. Porém você também queria ir na loja de animais elétricos ver as novidades`);
                 let esc6 = +prompt('Para qual você vai? Digite 1 para Rua Vint Cerf, 2 para Rua Tim Berners-Lee ou 3 para loja de animais: ');
+                //testaEscolha_3(esc6);//TESTE DOS LEK
                 if (testaEscolha_3(esc6)==1){//Rua Vint Cerf
                     dataHora();
                     console.log('Você encontra J.F. numa vitrine de uma loja de animais, ele está encantada tal qual uma criança vendo um desenho animado, toda sua pose de durão até se desfaz');
                     console.log('Você atira nele!')
                     androideMorre();
                 }
-                if (testaEscolha_3(esc6)==2){//Rua Tim Berners-Lee
+                else if (testaEscolha_3(esc6)==2){//Rua Tim Berners-Lee
                     dataHora();
                     console.log('Você chega lá e olha e toda extensão do lugar, locais próximos, pergunta para as pessoas e lojistas, mas ninguem viu alguem com as descrições que você apresenta.')
                     console.log('Bom... essa viagem não precisa de ser em vão então... E por isso você vai para a loja de animais');
                     lojaDeAnimais();
                 }
-                if (testaEscolha_3(esc6)==3){//loja de animais
+                else if (testaEscolha_3(esc6)==3){//loja de animais
                     dataHora();
                     lojaDeAnimais();
                 }
