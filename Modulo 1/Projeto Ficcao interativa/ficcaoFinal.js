@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-/*
+
 console.log('O ano é 2019, seu nome é Rick Deckard');
 console.log('A fumaça é a realidade estética do momento, é a fuamaça que vem das fábricas, é a fumaça do cigarro, é a fumaça do hovercar, é a fumaça da pomba artifical que se espatifou na selva de prédios');
 console.log('Você é um caçador de androides que trabalha para a polícia de Los Angeles, seu chefe, o Capitão Byrant, sabe que você vai fazer o necessário para terminar seu trabalho')
@@ -14,7 +14,7 @@ console.log('Androides sonham com ovelhas elétricas?');
 console.log('*****************************************************************************************************************************************************************************************************************')
 console.log('*****************************************************************************************************************************************************************************************************************')
 console.log()
-*/
+
 
 
 const nomesPersonagens = [
