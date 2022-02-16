@@ -394,7 +394,7 @@ do{
         }
         console.log('');
         console.log('');
-        jogo = prompt('Quer jogar de novo? ');
+        jogo = prompt('Quer jogar de novo (s/n)?  ');
     }
     while (jogo.toLocaleLowerCase() == 's');
 
