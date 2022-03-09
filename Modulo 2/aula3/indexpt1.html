@@ -1,0 +1,82 @@
+<!DOCTYPE html> <!-- DOCTYPE informa o tipo/extensão de arquivo do nosso VS -->
+<html lang="pt-br"> <!-- HTML língua (informa o motor do navegador a lingua que deve ser lida) -->
+<head> <!-- HEAD configura o HTML -->
+    <meta charset="UTF-8"> <!-- META - informa e configura informação da nosso HTML -->
+    <!-- charset indica o tipo de letra que vai lido (caractere) - UTF-8 (a-z / A-Z e com todos os acentos)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compabilidade da nossa página para Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nossa aplicação vai ser suportada por todos os dispositivos (smartphones, tablets e etc) -->
+    <title> Minha Primeira Página HTML </title> <!-- dá o nome da nossa pagina-->
+</head> 
+<body> 
+    <!-- Tags de lista -->
+
+    <div>
+        <h1>Tag de lista</h1>
+
+        <!--ul (unordened list) serve para crair lista não ordenadas-->
+        <ul>
+            <li>ovo</li>
+            <li>fermento</li>
+            <li>farinha</li>
+            <li>chocolate</li>
+        </ul>
+    </div>
+    <!-- ol (ordened list) serve pra criar listas ordenadas -->
+
+    <div>
+        <ol>
+            <li>Quebrar os ovos</li>
+            <li>Misturar os ovos com farinha e chocolate</li>
+            <li>Após misturar unte a forma</li>
+            <li>Coloque a mistura na forma untada</li>
+            <li>Leve ao forno por 35 minutos</li>
+        </ol>
+    </div>    
+        
+    <!-- Div e span -->
+
+    <!-- div é container, e ao dar um ID damos um "CPF", uma identidade 
+        unica pra ele, em geral usado pra CSS -->
+
+        <!-- div (divisoria-block - blocos) serve para agrupar itens que nao exite uma tag correspondente - blocl -->
+    <div id="container-nome">
+        Olá mundo!
+    </div>
+
+    <!-- span (divisoria-linha) serve para agrupar intens que não exite uma tag correspondente-->
+    <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate aut hic alias quo earum, et eius ipsam at eum illo, veniam id eligendi quis obcaecati est repudiandae fugit quibusdam quidem?
+        texto 1
+    </span>
+    <span>
+         texto 2 texto 3
+         texto 4
+    </span>
+    <span>
+        texto 5
+    </span>
+
+    <span lang="en">  <!-- somente neste span ele ira alterar a linguagem-->
+        <br>texto 6
+        <br>texto 7
+    </span>
+
+    <style>
+
+        div{
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid rgb(40, 206, 19);
+        }
+
+        /* tudo que for DIV vai receber a altercao, inclusive o "container-nome" */
+
+        #container-nome{
+            color: tomato;
+        }
+
+        span{
+            border: 2px solid blue;
+        }
+    </style>
+</body>
+</html>
