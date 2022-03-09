@@ -34,19 +34,31 @@ h3{
     text-shadow: .2rem .2rem #048a9e;
 }
 
+.container{
+    text-align: center;
+}
+
 button{
     padding: 1rem;
     font-size: 1.3rem;
     font-weight: 600;
+    font-family: 'Trebuchet MS' ;
     background-color: #055864;
     border: 2px solid #ffdd00;
     color: #BFAB25;
     border-radius: 2rem;
-    transition: all .5s ease-out;
     cursor: pointer;
     text-align: center;
 }
 
-#alteraHumor{
-    
+img{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 8%;
+    border-radius: 3rem;
+    transform: scaleX(-1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
