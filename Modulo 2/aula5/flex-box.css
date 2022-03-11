@@ -1,0 +1,46 @@
+div#container{
+    background-color: tomato;
+    display: flex;
+    flex-direction: ;
+}
+
+div.boxes{
+    background-color: black;
+    color: rgb(235, 204, 164);
+    width: 50px;
+    padding: 10px;/*o tamanho do que esta dentro seja expandido*/
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+div#container-wrap{
+    background-color: tomato;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.boxe-in-container{
+    background-color: black;
+    color: aliceblue;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+}
+
+div#container-flex{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: tomato;
+}
+
+
+div#container-align{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: tomato;
+    align-items: center;
+
+}
