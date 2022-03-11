@@ -12,7 +12,7 @@ elementoBtn.addEventListener('click', () =>{
         elementoNome.innerText = 'Emoji Feliz' /* Altera o texto do elemento nome */
         alteraSituacao.innerText = 'Feliz' /* Altera o texto do elemento situação */
         elementoBtn.value = 'segundo' /* Altera valor do botão */
-    } else if(elementoBtn.value == 'segundo') { /* Verifica se o valour do botão é 'segundo', se for troque de humor para o Dr. Hulk */
+    } else if(elementoBtn.value == 'segundo') { /* Verifica se o valour do botão é 'segundo', se for troque de humor para  */
         alteraImagem.src = './assets/img/angry2.gif'  /* Troca a imagem do personagem */
         elementoNome.innerText = 'Emoji Pistola' /* Altera o texto do elemento nome */
         alteraSituacao.innerText = 'Bravo' /* Altera o texto do elemento situação */
