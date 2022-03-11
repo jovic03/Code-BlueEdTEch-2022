@@ -62,3 +62,7 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
+div#txt{
+    font-size: 300%;
+}

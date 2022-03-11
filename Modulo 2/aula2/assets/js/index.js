@@ -6,21 +6,21 @@ let elementoBtn = document.querySelector('#botao-alteraHumor') /* Cria a variáv
 
 /* Adiciona o evento de click no elementoBtn e executa a função anonima (arrow function) */
 elementoBtn.addEventListener('click', () =>{
-    /* Verifica se o valour do botão é 'primeiro', se for troque de humor para o Hulk */
+    /* Verifica se o valour do botão é 'primeiro', se for troque de humor para o emoji feliz */
     if(elementoBtn.value == 'primeiro'){
         alteraImagem.src = './assets/img/smile2.gif' /* Troca a imagem do personagem */
         elementoNome.innerText = 'Emoji Feliz' /* Altera o texto do elemento nome */
         alteraSituacao.innerText = 'Feliz' /* Altera o texto do elemento situação */
         elementoBtn.value = 'segundo' /* Altera valor do botão */
-    } else if(elementoBtn.value == 'segundo') { /* Verifica se o valour do botão é 'segundo', se for troque de humor para  */
-        alteraImagem.src = './assets/img/angry2.gif'  /* Troca a imagem do personagem */
-        elementoNome.innerText = 'Emoji Pistola' /* Altera o texto do elemento nome */
-        alteraSituacao.innerText = 'Bravo' /* Altera o texto do elemento situação */
-        elementoBtn.value = 'terceiro'  /* Altera valor do botão */
-    } else { /* Se os valores do botão não forem, 'primeiro' nem 'segundo' mude para o Dr. Banner */
-        alteraImagem.src = './assets/img/nerd.gif' /* Troca a imagem do personagem */
-        elementoNome.innerText = 'Nerdola' /* Altera o texto do elemento nome */
-        alteraSituacao.innerText = 'A estudar' /* Altera o texto do elemento situação */
-        elementoBtn.value = 'primeiro' /* Altera valor do botão */
+    } else if(elementoBtn.value == 'segundo') { /* Verifica se o valour do botão é 'segundo', se for troque de humor para Emoji Pistola  */
+        alteraImagem.src = './assets/img/angry2.gif'  
+        elementoNome.innerText = 'Emoji Pistola' 
+        alteraSituacao.innerText = 'Bravo' 
+        elementoBtn.value = 'terceiro'  
+    } else { /* Se os valores do botão não forem, 'primeiro' nem 'segundo' mude para o nerdola */
+        alteraImagem.src = './assets/img/nerd.gif' 
+        elementoNome.innerText = 'Nerdola' 
+        alteraSituacao.innerText = 'A estudar' 
+        elementoBtn.value = 'primeiro' 
     }
 })
