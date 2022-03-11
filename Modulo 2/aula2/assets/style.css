@@ -20,9 +20,16 @@ html, body {
 }
 
 header {
-    background-color:#055864 ;
+    /* background-color:#055864 ;
     height: 7.5%;
     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center; */
+    background-color: #055864;
+    height: 10%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
