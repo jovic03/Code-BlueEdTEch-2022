@@ -4,5 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./html-js.css" type="text/css">
     </head>
+
+    <body>
+
+        <button onclick="handleEvent()" type="button">Clique</button>
+        <button onclick="handleFoto()" type="button">Altera Imagem</button>
+
+        <img id="imgMuda"
+        src="https://res.cloudinary.com/yktoo/image/upload/blog/qre07qixugajhgwbx5sj.jpg"
+        alt="Yvete"
+        width="200px">
+
+        <input id="inputTexto" 
+        type="text"
+        placeholder="digiter seu texto"
+        onchange="handleInput()" >
+
+        <h1 id="mudacor" >Hello World</h1>
+
+        <h2 id="helloworld">Hello World 2</h2>
+
+        <h2 class="class-hello-world">Hello World 3</h2>
+        <h2 class="class-hello-world">Hello World 4</h2>
+
+
+
+        <!-- delcarar script sempre dentro do body -->
+        <script src="./js/html-js.js"></script>
+    </body>
+
 </html>
+
