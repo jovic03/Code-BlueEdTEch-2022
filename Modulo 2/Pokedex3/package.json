@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Este porojeto foi feito com fins de aprendizagem no curso FulllStack (enfase em Backend) na BlueEdTech",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"nodemon index.js"
