@@ -1,0 +1,35 @@
+div.card-container{
+    background-color: #333333;
+    color:antiquewhite;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    /* border: solid 1px red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 10px 10px 1px #9f8b38;
+    padding: 5px;
+}
+
+div.card-container:hover{
+    transform: scale(1.2);
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+div.header-card{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}

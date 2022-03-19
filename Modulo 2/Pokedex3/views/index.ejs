@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+
 </head>
 <body>
+    <main>
     <h1>Minha pagina Pokedex</h1>
 
-    <div id="card-container"></div>
+    <% pokedex.forEach(pokedex=>{ %>
+        <a href="/detalhes/<%= pokedex.id  %> ">
+
+
+            <div class="card-container">
+                <div class="header-card"> 
+                    <span class="card-id"><%= pokedex.id %></span>
+                    <span class="card-num"><%= pokedex.num %></span>
+                </div>
+                <div class="main-card"> </div>
+                <img src="<%= pokedex.img %>" alt="<%= pokedex.name %>">
+                <div class="card-name"><%= pokedex.name %></div>
+                <div class="data-card">
+                    <span class="width"><%= pokedex.weight %></span>
+                    <span class="height"><%= pokedex.height %></span>
+                </div>
+            <% })%>
+            
+            
+            <div class="footer-card"><%= pokedex.type %></div>
+        </div>
+</a>
+</main>
 </body>
 </html>
