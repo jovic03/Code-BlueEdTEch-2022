@@ -4116,10 +4116,12 @@ app.get('/',(req,res)=>{//nome da rota e depois func anonima (callback)
     })//renderiza o index.ejs pro usuario
 })
 
-app.get('/detalhes/:id',(req,res)=>{//nome da rota e depois func anonima (callback)
-    req.params.id//**************pareeei aqui colar code d prof e estudar */
-    res.render('detalhes.ejs')//renderiza o index.ejs pro usuario
-})
-
 //esta posto poois sera aqui sera rendarizado
 
+app.get('/detalhes/:id', (req, res) => {//nome da rota e depois func anonima (callback)
+  const pokemonAtual = pokedex.filter((element)=> element.id == req.params.id)
+  res.render('detalhes.ejs', {
+      pokemonAtual//renderiza o index.ejs pro usuario
+  })
+  console.log(req.params.id)
+})
