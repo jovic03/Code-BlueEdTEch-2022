@@ -5,17 +5,17 @@ Este projeto foi feito com fins de aprendizagem no curso FulllStack (enfase em B
 
 ## Stack
 
-Javascript;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></svg></br>
+Javascript;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height= 30px/ /></svg></br>
 
 CSS3;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height= 30px/></br>
 
-HTML5;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height=30px/></br>
+HTML5;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height=30px/></br>
 
-Express;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" /></br>
+Express;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height= 30px//></br>
 
-Node.js;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /></br>
+Node.js;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height= 30px//></br>
 
-Nodemon.<img src="https://www.svgrepo.com/show/354122/nodemon.svg" /></br>
+Nodemon.<img src="https://www.svgrepo.com/show/354122/nodemon.svg" height= 30px/ /></br>
 
 ## Personal
 João Victor Gomes da Silva</br>
