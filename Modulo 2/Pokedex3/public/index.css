@@ -13,6 +13,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav {
@@ -50,6 +51,7 @@ div.card-container:hover {
 
 a {
     text-decoration: none;
+    color:rgb(0, 0, 0)
 }
 
 div.header-card {

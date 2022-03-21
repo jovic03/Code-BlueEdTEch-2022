@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pokedex </title>
-    <link rel="stylesheet" href="detalhes.css" type="text/css">
+    <link rel="stylesheet" href="/detalhes.css" type="text/css">
 </head>
 <body>
+    <nav> 
+        <ul> 
+            <a href="/" style="color: red;"> Pagina principal - Selecione seu Pokémon</a>
+        </ul>
+    </nav>
     <main>
         <% pokemonAtual.forEach(element => { %>
                 <div class="card-container"> 
@@ -32,6 +37,8 @@
                     <div class="footer-card"> <%= element.type %>  </div>
                 </div>
         <% }) %>
+        <nav> 
+
     </main>
 </body>
 </html>
