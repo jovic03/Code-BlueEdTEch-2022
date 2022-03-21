@@ -1,7 +1,7 @@
 # Pokedex-mvc-Blue
 
 ## Descricao do projeto
-Este porojeto foi feito com fins de aprendizagem no curso FulllStack (enfase em Backend) na BlueEdTech
+Este projeto foi feito com fins de aprendizagem no curso FulllStack (enfase em Backend) na BlueEdTech
 
 ## Stack
 
