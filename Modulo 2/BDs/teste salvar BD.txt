@@ -1,0 +1,44 @@
+select * from diretores;
+
+drop table diretores
+
+ALTER TABLE diretores 
+RENAME COLUMN name TO nome;
+
+create table diretores(
+	id int not null generated always as identity,--always as identity é para auto incremento
+	name varchar not null,
+	primary key (id)
+)
+
+insert into diretores (nome) values ('joao')
+
+insert into diretores (nome) values ('iulia');
+insert into diretores (nome) values ('marcos');
+insert into diretores (nome) values ('paulo');
+insert into diretores (nome) values ('henrique');
+insert into diretores (nome) values ('henrique');
+
+
+--select * from diretores where nome like 'h%' -- 'a%' a porcentagem ignora o que vai depois do a e '%a' pra ingorar o que vem antes
+delete from diretores where id = 8
+
+select * from diretores;
+
+-- UPDATE diretores SET nome = 'fernando' WHERE nome like 'paulo';
+
+UPDATE diretores SET nome = 'Pablo' WHERE id = 2;
+UPDATE diretores SET nome = 'silvana' WHERE id = 3;
+
+ALTER TABLE diretores
+ADD idade int;
+
+ALTER TABLE diretores drop COLUMN idade;
+
+ALTER TABLE diretores ADD COLUMN idade int;
+
+ALTER TABLE diretores 
+RENAME COLUMN idade to genero;
+
+ALTER TABLE diretores 
+add constraints id generated always as identity;
