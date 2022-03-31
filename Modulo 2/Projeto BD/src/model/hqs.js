@@ -29,10 +29,10 @@ export const variados = connection.define(
             type: Sequelize.TEXT,
             allowNull:false
         },
-        iframe:{
-            type: Sequelize.TEXT,
-            allowNull:false
-        }
+        // iframe:{
+        //     type: Sequelize.TEXT,
+        //     allowNull:false
+        // }
     }, {
         freezeTableName:true,
         createdAt:false,
