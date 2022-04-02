@@ -14,6 +14,9 @@
     box-sizing: border-box;
     font-family: 'Permanent Marker';
     font-size: 0.8rem;
+    background-image: url('../css/img/criar.png');
+    background-repeat: no-repeat;
+    background-size: 125%;
   }
   
   :root {/*body do criar*/
@@ -54,7 +57,7 @@
   header div ul {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 7rem;
     list-style: none;
   }
   
