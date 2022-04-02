@@ -6,6 +6,7 @@
 body{
     background-color: #0e7cb9;
     color: #F7F708;
+    
 }
 
 ul{
@@ -21,7 +22,7 @@ ul{
 header{
     background-color: #C22307 ;
     
-}
+} 
 
 .img-fundo {
     /* background: none repeat scroll 0 0 #FFFFFF; */
@@ -68,4 +69,4 @@ div.container-title{
 
 div.card-container img{
     height: 100%;
-}
+} 

@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <title>Index</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        </style>
+    <title>Hqs</title>
 </head>
-<body >
-    
-    <%- include ('./partials/header.ejs') %> 
-
+<body>
+    <%- include('./partials/header.ejs') %>
     <main>
-        
         <% hqs.forEach(element => { %>
             <a href="detalhes/<%= element.id %> ">
                 <div class="card-container"> 
@@ -31,18 +24,15 @@
                     </div>
                     <div class="btn-container">
                        <a href="/apagar/<%= element.id %> ">
-                            <img class="delete-icon" src="/img/delete.png" alt="delete icon">
+                            <img class="delete-icon" src="/css/img/delete.png" alt="delete icon">
                        </a>
                        <a href="/editar/<%= element.id %> ">
-                            <img class="edit-icon" src="/img/edit.png" alt="edit icon">
+                            <img class="edit-icon" src="/css/img/edit.png" alt="edit icon">
                        </a>
                     </div>
                 </div>
             </a> 
         <% }) %>  
-
-        
     </main>
-    <div class="img-fundo"><img src="./css/img/blurryBackground.png" /></div>
 </body>
 </html>
