@@ -42,6 +42,8 @@
     font-size:larger;
   }
   
+/* ------------------HEADER------------------ */
+
   header {
     background-color: var(--nav-color-main);
     font-size: xx-large;
@@ -57,21 +59,23 @@
   header div ul {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 7rem;
     list-style: none;
   }
   
-  header div input {
+  /* header div input {
     background-color: var(--bg-color-input);
     color: #C22307;
     border-radius: 0.3rem;
     padding: 0.3rem;
-  }
+  } */
   
   header li:hover {
     color: #0e7cb9;
   }
   
+/* ------------------MAIN------------------ */
+
   main {
     display: flex;
     justify-content: center;
