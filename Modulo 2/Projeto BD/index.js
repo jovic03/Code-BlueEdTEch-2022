@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 
 dotenv.config()
-
+//teste
 const app = express()
 const port = 3001
 const __dirname = path.resolve(path.dirname(''))
