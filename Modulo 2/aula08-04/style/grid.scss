@@ -43,11 +43,67 @@ footer{
 }
 
 section{
-    background-color: pink;
+    //background-color: pink;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 4fr 1fr 4fr 0.5fr;
+    grid-template-areas:
+    "iframe iframe iframe"
+    "img-container img-container img-container"
+    "text-container text-container text-container"
+    "extra-container extra-container extra-container";
+
+    .iframe{
+        grid-area: iframe;
+    };
+
+    .img-container{
+        grid-area: img-container;
+        gap: 10px;
+        grid-area: imgContainer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+
+        .img{
+            background-color: blue
+        }
+    };
+
+    .text-container{
+        grid-area: text-container; 
+    };
+
+    .extra-container{
+        grid-area: extra-container; 
+    };
 }
 
 aside{
     background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6fr 0.5fr 1fr;
+    grid-template-areas: 
+    "banner-aside banner-aside"
+    "info-aside info-aside"
+    "extra-aside extra-aside";
+
+    .banner-aside{
+        background-color: black;
+        color: #fff;
+        grid-area: bannerAside;
+    }
+    .info-aside{
+        background-color: black;
+        color: #fff;
+        grid-area:infoAside;
+    }
+    .extra-aside{
+        background-color: black;
+        color: #fff;
+        grid-area:extraAside;
+        gap: 10px;
+    }
 }
 
 .box{
