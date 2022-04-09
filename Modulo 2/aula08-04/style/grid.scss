@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;//content-box é o padrao do syst soma todos tamanhos codados neles
+    //content-box ele delimita que vai ser mexido "de fora pra dentro, naop ultrapassando o limite da caixa, diferente do outro que vai somando tamanho"
+}
+
+//pra iniciar o sass: "sass --watch grid.scss grid.css"
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;//fracao --- otimo pra responsividade
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "hd hd hd"//hd . . pra ver a diferenca
+    "mn mn mn"
+    "ft ft ft ";
+}
+
+header{
+    background-color: tomato;
+    //grid-column: 1/3;
+    grid-area: hd;//hd = HeaDer
+}
+
+main{
+    //background-color: blueviolet;
+    grid-column: 1/3;
+    //grid-row: 2/4;//só seria util caso no grid.html ele estivesse trocado de posicao com o header (se o hedader estivesse no main)
+    grid-area: mn;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+footer{
+    background-color: cadetblue ;
+    //grid-column: 1/3;
+    grid-area: ft;
+}
+
+section{
+    background-color: pink;
+}
+
+aside{
+    background-color: aqua;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: 10px solid red;
+}
