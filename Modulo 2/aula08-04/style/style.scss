@@ -29,10 +29,10 @@ main{
     border: 1px solid red;
     background-color: $main-color;//importando do main containts
 
-    .card{
+    .card{//encadedado
         background-color: red;
 
-        &:hover{
+        &:hover{//encadedado dentro do .card
             background-color: rgb(180, 177, 177);
             color: white;
         }
