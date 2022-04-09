@@ -10,13 +10,15 @@
 body{
     width: 100vw;
     height: 100vh;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;//fracao --- otimo pra responsividade
+    grid-template-columns: 1fr 1fr 1fr;//fracao --- otimo pra responsividade
     grid-template-rows: 1fr 8fr 1fr;
     grid-template-areas: 
     "hd hd hd"//hd . . pra ver a diferenca
     "mn mn mn"
-    "ft ft ft ";
+    "ft ft ft"
+    ;
 }
 
 header{
@@ -27,11 +29,11 @@ header{
 
 main{
     //background-color: blueviolet;
-    grid-column: 1/3;
+    //grid-column: 1/3;
     //grid-row: 2/4;//só seria util caso no grid.html ele estivesse trocado de posicao com o header (se o hedader estivesse no main)
-    grid-area: mn;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
+        grid-area: mn;
     gap: 16px;
     padding: 16px;
 }
@@ -41,74 +43,79 @@ footer{
     //grid-column: 1/3;
     grid-area: ft;
 }
-
-section{
-    //background-color: pink;
+section {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    grid-template-columns: 4fr 1fr 4fr 0.5fr;
-    grid-template-areas:
+    grid-template-rows: 4fr 1fr 4fr 0.5fr;
+    grid-template-areas: 
     "iframe iframe iframe"
-    "img-container img-container img-container"
-    "text-container text-container text-container"
-    "extra-container extra-container extra-container";
+    "imgContainer imgContainer imgContainer"
+    "textContainer textContainer textContainer"
+    "extraContainer extraContainer extraContainer"
+    ;
 
-    .iframe{
+    iframe {
         grid-area: iframe;
-    };
+    }
 
     .img-container{
-        grid-area: img-container;
-        gap: 10px;
-        grid-area: imgContainer;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: imgContainer;
 
-        .img{
-            background-color: blue
+        .img {
+            background-color: black;
+            color: #ffffff;
         }
-    };
+    }
 
-    .text-container{
-        grid-area: text-container; 
-    };
+    .text-container {
+        background-color: black;
+        color: #ffffff;
+        grid-area: textContainer;
+    }
 
-    .extra-container{
-        grid-area: extra-container; 
-    };
+    .extra-container {
+        background-color: black;
+        color: #ffffff;
+        grid-area: extraContainer;
+    }
 }
 
-aside{
-    background-color: aqua;
+aside {
     display: grid;
+    grid-template-areas: 
+    "bannerAside bannerAside"
+    "infoAside infoAside"
+    "extraAside extraAside";
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 6fr 0.5fr 1fr;
-    grid-template-areas: 
-    "banner-aside banner-aside"
-    "info-aside info-aside"
-    "extra-aside extra-aside";
 
-    .banner-aside{
+    .banner-aside {
         background-color: black;
-        color: #fff;
+        color: #ffffff;
         grid-area: bannerAside;
     }
-    .info-aside{
-        background-color: black;
-        color: #fff;
-        grid-area:infoAside;
-    }
-    .extra-aside{
-        background-color: black;
-        color: #fff;
-        grid-area:extraAside;
-        gap: 10px;
-    }
-}
 
-.box{
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    border: 10px solid red;
+    .info-aside {
+        background-color: black;
+        color: #ffffff;
+        grid-area: infoAside;
+    }
+
+    .extra-aside {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 2fr;
+        color: #ffffff;
+        grid-area: extraAside;
+
+        .extra-contents {
+            background-color: black;
+            color: white;
+        }
+    }
 }
