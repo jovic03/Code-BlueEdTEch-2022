@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*general pallets colors*/
+/*main containts*/
+body {
+  background-color: aqua;
+  color: #000;
+  margin: 16px;
+  padding: 16rem;
+}
+
+main {
+  color: aqua;
+  border: 1px solid red;
+  background-color: #f00fff;
+}
+main .card {
+  background-color: red;
+}
+main .card:hover {
+  background-color: rgb(180, 177, 177);
+  color: white;
+}
+
+aside .card {
+  background-color: #0000ff;
+}
+
+/*# sourceMappingURL=style.css.map */

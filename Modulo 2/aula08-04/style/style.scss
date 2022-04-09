@@ -1,0 +1,47 @@
+//reset 
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*general pallets colors*/
+@mixin  generalConfig {
+    background-color: aqua;
+    color: #000;
+    margin: 16px;
+    padding: 16rem;    
+}
+
+/*main containts*/
+//muito usado pra dark mode
+$main-color:#f00fff;
+$secundary-color:#0000ff;
+$color-text:#000;
+
+body{
+    @include generalConfig;
+    //importando do mixing
+}
+
+main{
+    color: aqua;
+    border: 1px solid red;
+    background-color: $main-color;//importando do main containts
+
+    .card{
+        background-color: red;
+
+        &:hover{
+            background-color: rgb(180, 177, 177);
+            color: white;
+        }
+    }
+}
+
+
+aside {
+    .card{
+        background-color: $secundary-color;
+    }
+}
