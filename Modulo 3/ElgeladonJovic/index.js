@@ -39,6 +39,14 @@ app.get('/paletas/find-paletas',(req,res)=>{//http://localhost:3000/paletas/find
     res.send(paletas)
 })
 
+//GET by id
+app.get('/paletas/find-paleta/:id', (req, res) => {//passando parametro na rota
+  const idParam = Number(req.params.id);//jogando em idParam o que vem da req anterior como parametro, neste caso id
+  const chosenPaleta = paletas.find((paleta) => paleta.id === idParam);//itera em 'paletas', olhar ID e comparar com o id de parametro da requisacao e joga linha de baixo no chosenPaleta-- os 3 "=" comparam valor e tipo, a na linha anterior convertemos para number, boas praticas
+  res.send(chosenPaleta);
+});
+
+
 app.listen(port,()=>{//arrow function só pra dar consolelog
     console.log(`Servidor rodando em http://localhost:${port} 🚀`);
 })
