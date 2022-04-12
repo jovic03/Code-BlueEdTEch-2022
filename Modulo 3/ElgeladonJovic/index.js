@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');//cors serve para proteger o trafego de informacao entre front e back
+
 const port = 3000;
 const app = express(); //chamando o framework
 
-//configuracao para trabalhar com json
-app.use (express.json());
+app.use (express.json());//configuracao para trabalhar com json
+app.use(cors());//configuracao para trabalhar com cors
+
 
 //definir dados para usar na aplicacao
 const paletas = [
