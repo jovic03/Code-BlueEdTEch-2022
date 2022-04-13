@@ -5,7 +5,7 @@ const port = 3000;
 const app = express(); //chamando o framework
 
 app.use(express.json()); //configuracao para trabalhar com json
-app.use(cors()); //configuracao para trabalhar com cors
+app.use(cors()); //configuracao para trabalhar com cors para que aplicaco seja visivel pelo front
 
 //definir dados para usar na aplicacao
 const paletas = [
@@ -43,7 +43,7 @@ app.get('/paletas/find-paletas', (req, res) => {
   res.send(paletas);
 });
 
-//GET by id
+//GET (lista) pelo id
 app.get('/paletas/find-paleta/:id', (req, res) => {
   //passando parametro na rota
   const idParam = Number(req.params.id); //jogando em idParam o que vem da req anterior como parametro, neste caso id
