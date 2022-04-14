@@ -62,7 +62,7 @@ html{
         grid-template-columns: repeat(3,1fr) ;
     }
 
-    @media screen (max-width:840px){/*quando tiver ate 840px  fique só com 1 coluna*/
+    @media (max-width:840px){/*quando tiver ate 840px  fique só com 1 coluna*/
         .PaletaLista{
             grid-template-columns: repeat(1fr) ;
         }
