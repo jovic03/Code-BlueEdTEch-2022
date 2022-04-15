@@ -59,10 +59,30 @@ const findByIdPaletasService = (idParam)=>{/*pergando parametro do controller e 
     return paleta = paletas.find((paleta) => paleta.id === idParam);
 };
 
+const createPaletaService = (newPaleta)=>{
+    const newId = paletas.length + 1;//crio um novo ID (neste caso pego o tamanho do array de paletas e somo 1)
+    newPaleta.id = newId;//depois de criar o id eu atribuo
+    paletas.push(newPaleta);//faço push
+    return newPaleta;//retorno esse push
+};
 
+const updatePaletaService  = (id, paletaEdit)=>{
+    paletaEdit['id'] = id;//atribui a variavel id a posicao do id (['id'])
+    const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);//pega on indice e procura no recebido na linha anterior
+    paletas[paletaIndex] = paletaEdit;//pega o paletaIndex e atribui ao paletaEdited
+    return paletaEdit;//reforcando que ele ira mudar todos dados menos id
+};
+
+const deletePaletaService  = (id)=>{
+  const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);//semelhante ao update ele procura o indice e na linha de baixo 'retorna'(deleta) o que estava nesse indice
+  return paletas.splice(paletaIndex, 1);
+};
 
 module.exports={
     findAllPaletasService,
-    findByIdPaletasService
+    findByIdPaletasService,
+    createPaletaService,
+    updatePaletaService,
+    deletePaletaService
 }
 
