@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors'); //cors serve para proteger o trafego de informacao entre front e back
+const routes = require('./src/routes/paleta.route')//'instalando o paleta.routes'
 
 const port = 3000;
 const app = express(); //chamando o framework
 
 app.use(express.json()); //configuracao para trabalhar com json
 app.use(cors()); //configuracao para trabalhar com cors para que aplicaco seja visivel pelo front
+app.use('/paletas',routes);//o '/paletas'  nao precisara ser colocado
 
+/*
 //definir dados para usar na aplicacao
 const paletas = [
   {
@@ -60,17 +63,30 @@ const paletas = [
   },
 ];
 
+FOI TRANSFERIDA PARA O PALETA.SERVICE PORTANTO NAO SERA UTILIZADA AQUI*/
+
+/*
+teste de rede:
 app.get('/', function (req, res) {
   //GET pega algo do endereco
   res.send('hello world');
 });
+*/
 
+
+
+/*
 //pegando dados:
 app.get('/paletas/find-paletas', (req, res) => {
   //http://localhost:3000/paletas/find-paletas
   res.send(paletas);
 });
 
+NAO PRECISA MAIS POS ESTA SENDO FEITO PELO CONTROLLER E NAO SERA LOCAL MAIS
+*/
+
+
+/*
 //GET (lista) pelo id
 app.get('/paletas/find-paleta/:id', (req, res) => {
   //passando parametro na rota
@@ -78,6 +94,8 @@ app.get('/paletas/find-paleta/:id', (req, res) => {
   const chosenPaleta = paletas.find((paleta) => paleta.id === idParam); //itera em 'paletas', olhar ID e comparar com o id de parametro da requisacao e joga linha de baixo no chosenPaleta-- os 3 "=" comparam valor e tipo, a na linha anterior convertemos para number, boas praticas
   res.send(chosenPaleta);
 });
+NAO PRECISA MAIS POS ESTA SENDO FEITO PELO CONTROLLER
+*/
 
 app.listen(port, () => {
   //arrow function só pra dar consolelog
