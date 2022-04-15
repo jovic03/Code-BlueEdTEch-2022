@@ -54,4 +54,4 @@ const findByIdPaletas = async () => {
         <img class="PaletaCardItem__foto" src=${paleta.foto} alt=${`Paleta de ${paleta.sabor}`} />
     </div>
     `;
-  };
+};
