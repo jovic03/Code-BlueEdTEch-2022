@@ -49,7 +49,7 @@ html{
     .Home__container {
       justify-content: unset;
     }
-  }
+}
 
 .PaletaLista{
     display: grid;
@@ -59,7 +59,7 @@ html{
 
 @media (max-width:1220px){ /*quando a tela tiver 1220px use este grid ao inves do anterior*/
     .PaletaLista{
-        grid-template-columns: repeat(3,1fr) ;
+        grid-template-columns: repeat(2,1fr) ;
     }
 }
 @media (max-width:840px){/*quando tiver ate 840px  fique só com 1 coluna*/
