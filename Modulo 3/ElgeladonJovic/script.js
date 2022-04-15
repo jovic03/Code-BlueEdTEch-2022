@@ -1,13 +1,12 @@
 const baseUrl = 'http://localhost:3000/paletas';
 
-async function findAllPaletas() {
-  /*como é fora do front e pra nao ter problema de timeout*/
+async function findAllPaletas() {/*como é fora do front e pra nao ter problema de timeout*/
 
   const response = await fetch(`${baseUrl}/find-paletas`); /*fetch me deixa pegar alguma coisa, nesse caso uma requisicao e armazenar no response*/
 
   const paletas = await response.json();//espera chegar o fetch anterior pra armazenar .json dentro de 'paletas'
   
-  paletas.forEach((paleta) => {//cada objeto dentro do array vai ser usado pra fazer o abaixo dentor do callback
+  paletas.forEach((paleta) => {//cada objeto dentro do array vai ser usado pra fazer o abaixo dentro do callback
       document.getElementById('paletaList').insertAdjacentHTML(
         //priemiro parametro (posicao)
         'beforeend',

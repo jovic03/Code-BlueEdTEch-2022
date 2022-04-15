@@ -30,6 +30,34 @@ const paletas = [
     foto: 'assets/images/chocolate-belga.png',
     preco: 7.0,
   },
+  {
+    id: 4,
+    sabor: 'Chocolate Belga com Brigadeiro',
+    descricao: 'Chocolate Belga com Brigadeiro',
+    foto: 'assets/images/chocolate-belga-com-brigadeiro.png',
+    preco: 8.0,
+  },
+  {
+    id:5,
+    sabor: 'Chocolate Branco',
+    descricao: 'Chocolate Branco',
+    foto: 'assets/images/chocolate-branco.png',
+    preco: 6.0,
+  },
+  {
+    id: 6,
+    sabor: 'Coco',
+    descricao: 'Coco',
+    foto: 'assets/images/coco.png',
+    preco: 11.0,
+  },
+  {
+    id: 7,
+    sabor: 'Uva',
+    descricao: 'Uva',
+    foto: 'assets/images/uva.png',
+    preco: 14.0,
+  },
 ];
 
 app.get('/', function (req, res) {

@@ -45,16 +45,16 @@ html{
    justify-content: center;
 }
 
-@media (max-width: 350px) { /*quando a tela for maior que 350px desfaça o justify content do home-container */
-    .Home__container {
-      justify-content: unset;
-    }
-}
-
 .PaletaLista{
     display: grid;
     grid-template-columns: repeat(3,1fr);/*grid com 3 colunas cada uma ocupando 1frame*/
     grid-gap: 25px 50px;
+}
+
+@media (max-width: 350px) { /*quando a tela for maior que 350px desfaça o justify content do home-container */
+    .Home__container {
+      justify-content: unset;
+    }
 }
 
 @media (max-width:1220px){ /*quando a tela tiver 1220px use este grid ao inves do anterior*/
@@ -85,6 +85,7 @@ html{
     margin: 20px 0;
     height: 150px;
     width: auto;
+    margin-top: 50px;
 }
 
 @media (max-width:400px){
