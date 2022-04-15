@@ -73,8 +73,6 @@ app.get('/', function (req, res) {
 });
 */
 
-
-
 /*
 //pegando dados:
 app.get('/paletas/find-paletas', (req, res) => {
@@ -84,7 +82,6 @@ app.get('/paletas/find-paletas', (req, res) => {
 
 NAO PRECISA MAIS POS ESTA SENDO FEITO PELO CONTROLLER E NAO SERA LOCAL MAIS
 */
-
 
 /*
 //GET (lista) pelo id
