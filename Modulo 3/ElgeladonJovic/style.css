@@ -125,3 +125,43 @@ html{
     height: 150px;
     margin-right: -60px;
 }
+
+.paleta-escolhida-espaco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#idPaleta{
+    padding: 0.5rem;
+    width: 315px;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+#idPaletaButton {
+    background-color: transparent;
+    border: 1px solid #9400d3;
+    padding: 0.4rem;
+    color: #9400d3;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    width: 330px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+#idPaletaButton:hover {
+    background-color: #9400d3;
+    color: #3fd300;
+  }
+  
+  #paleta-escolhida-input-espaco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
