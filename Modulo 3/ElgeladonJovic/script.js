@@ -10,24 +10,21 @@ async function findAllPaletas() {
   paletas.forEach((paleta) => {//cada objeto dentro do array vai ser usado pra fazer o abaixo dentor do callback
       document.getElementById('paletaList').insertAdjacentHTML(
         //priemiro parametro (posicao)
-        "beforeend",
+        'beforeend',
 
         //segundo parametro (conteudo adicionado)
         `
         <div class="PaletaListaItem">
-        <div>
-            <div class="PaletaListaItem__sabor">${paleta.sabor}</div>
-            <div class="PaletaListaItem__preco">R$ ${paleta.preco.toFixed(2)}</div>
-            <div class="PaletaListaItem__descricao">${paleta.descricao}</div>
-          </div>
-        </div>
-            <img class="PaletaListaItem__foto" 
-            src=${paleta.foto} 
-            alt=${`Paleta de ${paleta.sabor}`} />
+            <div>
+              <div class="PaletaListaItem__sabor">${paleta.sabor}</div>
+              <div class="PaletaListaItem__preco">R$${paleta.preco.toFixed(2)}</div>
+              <div class="PaletaListaItem__descricao">${paleta.descricao}</div>
+            </div>
+            <img class="PaletaListaItem__foto" src=${paleta.foto} alt=${`Paleta de ${paleta.sabor}`} />
+
         </div>
 
         `
-
       )
   });
   
