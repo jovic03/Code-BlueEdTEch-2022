@@ -142,7 +142,7 @@ html{
     border-radius: 0.2rem;
 }
 
-#idPaletaButton {
+.default-button {
     background-color: transparent;
     border: 1px solid #9400d3;
     padding: 0.4rem;
@@ -156,7 +156,7 @@ html{
     font-size: 1rem;
 }
 
-#idPaletaButton:hover {
+.default-button:hover {
     background-color: #9400d3;
     color: #3fd300;
   }
@@ -317,14 +317,14 @@ html{
 
 }
 
-.modal-body form{
+.modal-body div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.modal-body form input, textarea{
+.modal-body div input, textarea{
     width: 100%;
     padding: .5rem;
     font-size: .8rem;/*dentro do input*/
@@ -334,7 +334,7 @@ html{
     border-radius: .3rem;
 }
 
-.modal-body form button{
+.modal-body div button{
     padding: .5rem;
     width: 30%;
     font-size: 1rem;
@@ -346,7 +346,12 @@ html{
     transition: all 0.3s ease-in-out;
 }
 
-.modal-body form button:hover{
+.modal-body div button:hover{
     background-color: #9d23a8;
     color: #3fd300;
+}
+
+.button-modal-create{
+    display: flex;
+    justify-content: flex-end;
 }

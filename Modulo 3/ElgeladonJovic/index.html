@@ -39,7 +39,7 @@
         </header>
 
         <section class="button-modal-create"><!-- Modal criar janela popup  -->
-          <button type="button" onclick="abrirModalCadastro()">Cadastrar Paleta</button>
+          <button type="button" class="default-button" onclick="abrirModalCadastro()">Cadastrar Paleta</button>
         </section>
         
         <section class="modal-overlay" id="overlay">
@@ -50,13 +50,13 @@
             </div>
 
             <div class="modal-body">
-              <form action="">
+              <div>
                 <input type="text" name="sabor" id="sabor" placeholder="Sabor da paleta">
                 <input type="number" name="preco" id="preco" placeholder="Preço da paleta">
                 <textarea type="text" name="descricao" id="descricao" placeholder="Descrição" rows="5"></textarea>
                 <input type="text" name="foto" id="foto" placeholder="Link da foto da paleta">
-                <button type="submit">Cadastrar</button>
-              </form>
+                <button onclick="createPaleta()">Cadastrar</button>
+              </div>
             </div>
 
           </div>
@@ -71,7 +71,7 @@
 
                 <input type="number" id="idPaleta" placeholder="Digite o ID da paleta e clique em 'Escolher'" />
 
-                <button id="idPaletaButton" onclick="findByIdPaletas()">ESCOLHER</button>
+                <button class="default-button" onclick="findByIdPaletas()">ESCOLHER</button>
 
             </div>
 
