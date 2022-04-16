@@ -31,6 +31,14 @@ async function findAllPaletas() {/*como é fora do front e pra nao ter problema 
 
 findAllPaletas();
 
+function abrirModalCadastro(){
+  document.querySelector('.modal-overlay').style.display = 'flex';/*procure ".modal-overlay" em .style e procure a propriedade display e altere pra o seu valor paro o texto : "flex"*/
+}
+
+function fecharModalCadastro(){
+  document.querySelector('.modal-overlay').style.display = 'none';/*procure ".modal-overlay" em .style e procure a propriedade display e altere pra o seu valor paro o texto : "none"*/
+}
+
 
 //Pegar uma paleta pelo ID
 

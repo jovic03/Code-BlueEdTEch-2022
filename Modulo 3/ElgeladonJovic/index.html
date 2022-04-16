@@ -14,7 +14,7 @@
     <div class="Home">
 
         <!-- Header e opcoes de alteracao -->
-        <div class="Home__header Header">
+        <header class="Home__header Header">
             <div class="row">
               <div class="Header__logo Logo">
                 <img
@@ -32,17 +32,35 @@
                     src="assets/icons/sacola.svg"
                     width="40px"
                     class="Sacola__icone"
-                    alt="Sacola de compras"
-                  />
+                    alt="Sacola de compras"/>
                 </div>
               </div>
             </div>
+        </header>
+
+        <section class="button-modal-create"><!-- Modal criar janela popup  -->
+          <button type="button" onclick="abrirModalCadastro()">Cadastrar Paleta</button>
+        </section>
+        
+        <section class="modal-overlay" id="overlay">
+          <div class="modal">
+            <div class="modal-header">
+              <h2>Cadastrar nova Paleta</h2>
+              <a onclick="fecharModalCadastro()" class="close-modal">X</a>
+            </div>
+
+            <div class="modal-body">
+              <form action="">
+                <input type="text" name="sabor" id="sabor" placeholder="Sabor da paleta">
+                <input type="number" name="preco" id="preco" placeholder="Preço da paleta">
+                <textarea type="text" name="descricao" id="descricao" placeholder="Descrição" rows="5"></textarea>
+                <input type="text" name="foto" id="foto" placeholder="Link da foto da paleta">
+                <button type="submit">Cadastrar</button>
+              </form>
+            </div>
+
           </div>
-
-
-
-
-
+        </section>
 
         <!-- listagem de 1 paleta por ID -->
         <h2>Pesquisar Paleta</h2>
