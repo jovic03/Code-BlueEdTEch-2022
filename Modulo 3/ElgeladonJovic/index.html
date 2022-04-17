@@ -39,23 +39,24 @@
         </header>
 
         <section class="button-modal-create"><!-- Modal criar janela popup  -->
-          <button type="button" class="default-button" onclick="abrirModalCadastro()">Cadastrar Paleta</button>
+          <button type="button" class="default-button" onclick="abrirModal()">Cadastrar Paleta</button>
         </section>
         
         <section class="modal-overlay" id="overlay">
           <div class="modal">
             <div class="modal-header">
-              <h2>Cadastrar nova Paleta</h2>
+              <h2 id="title-header-modal">Cadastrar nova Paleta</h2>
               <a onclick="fecharModalCadastro()" class="close-modal">X</a>
             </div>
 
             <div class="modal-body">
               <div>
+                <input type="hidden" id="id">
                 <input type="text" name="sabor" id="sabor" placeholder="Sabor da paleta">
                 <input type="number" name="preco" id="preco" placeholder="Preço da paleta">
                 <textarea type="text" name="descricao" id="descricao" placeholder="Descrição" rows="5"></textarea>
                 <input type="text" name="foto" id="foto" placeholder="Link da foto da paleta">
-                <button onclick="createPaleta()">Cadastrar</button>
+                <button  id="button-form-modal" onclick="createPaleta()">Cadastrar</button>
               </div>
             </div>
 
