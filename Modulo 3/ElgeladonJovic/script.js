@@ -2,12 +2,12 @@ const baseUrl = 'http://localhost:3000/paletas';
 
 async function findAllPaletas() {/*como é fora do front e pra nao ter problema de timeout*/
 
-  const response = await fetch(`${baseUrl}/find-paletas`); /*fetch me deixa pegar alguma coisa, nesse caso uma requisicao e armazenar no response*/
+  const response = await fetch(`${baseUrl}/todas-paletas`); /*fetch me deixa pegar alguma coisa, nesse caso uma requisicao e armazenar no response*/
 
   const paletas = await response.json();//espera chegar o fetch anterior pra armazenar .json dentro de 'paletas'
   
-  paletas.forEach((paleta) => {//cada objeto dentro do array vai ser usado pra fazer o abaixo dentro do callback
-      document.getElementById('paletaList').insertAdjacentHTML(
+  paletas.forEach(paleta => {//cada objeto dentro do array vai ser usado pra fazer o abaixo dentro do callback
+      document.querySelector('#paletaList').insertAdjacentHTML(
         //priemiro parametro (posicao)
         'beforeend',
 
@@ -21,11 +21,11 @@ async function findAllPaletas() {/*como é fora do front e pra nao ter problema 
 
               <div class="PaletaListaItem__acoes Acoes">
                 <button class="Acoes__editar btn " onclick="abrirModal(${paleta.id})">Editar</button>
-                <button class="Acoes__apagar btn">Apagar</button>
+                <button class="Acoes__apagar btn" onclick="abrirModalDelete(${paleta.id})">Apagar</button>
               </div>
 
             </div>
-            <img class="PaletaListaItem__foto" src=${paleta.foto} alt=${`Paleta de ${paleta.sabor}`} />
+            <img class="PaletaListaItem__foto" src=${paleta.foto} alt=${"Paleta de ${paleta.sabor}"} />
 
             
 
@@ -39,13 +39,13 @@ async function findAllPaletas() {/*como é fora do front e pra nao ter problema 
 
 //Pegar uma paleta pelo ID
 const findByIdPaletas = async () => {
-  const id = document.getElementById("idPaleta").value;
+  const id = document.querySelector("#idPaleta").value;
 
-  const response = await fetch(`${baseUrl}/find-paleta/${id}`);
+  const response = await fetch(`${baseUrl}/paleta/${id}`);
 
   const paleta = await response.json();
 
-  const paletaEscolhidaDiv = document.getElementById("paletaEscolhida");
+  const paletaEscolhidaDiv = document.querySelector("#paletaEscolhida");
 
   paletaEscolhidaDiv.innerHTML = 
   `
@@ -57,7 +57,7 @@ const findByIdPaletas = async () => {
 
       <div class="PaletaListaItem__acoes Acoes">
         <button class="Acoes__editar btn " onclick="abrirModal(${paleta.id})">Editar</button>
-        <button class="Acoes__apagar btn">Apagar</button>
+        <button class="Acoes__apagar btn" onclick="abrirModalDelete(${paleta.id})">Apagar</button>
       </div>
 
     </div>
@@ -76,7 +76,7 @@ async function abrirModal(id = null){//quando abrir o modal no botao "cadastrar 
 
     document.querySelector('#button-form-modal').innerText= "Atualizar";//altera o texto do modal
     
-    const response = await fetch(`${baseUrl}/find-paleta/${id}`);//busca no back o id
+    const response = await fetch(`${baseUrl}/paleta/${id}`);//busca no back o id
     const paleta = await response.json();//recebe caso ache o solicitado na linha superior
 
     //aqui eu trago para o modal os valores e os preencho (pra ficar de referencia o que vai ser atualizado)
@@ -92,10 +92,10 @@ async function abrirModal(id = null){//quando abrir o modal no botao "cadastrar 
     document.querySelector('#button-form-modal').innerText= "Cadastrar";//altera o texto do modal
   }
 
-  document.querySelector('.modal-overlay').style.display = 'flex';/*procure ".modal-overlay" em .style e procure a propriedade display e altere pra o seu valor paro o texto : "flex"*/
+  document.querySelector('#overlay').style.display = 'flex';/*procure "overlay" em .style e procure a propriedade display e altere pra o seu valor paro o texto : "flex"*/
 }
 
-function fecharModalCadastro(){
+function fecharModal(){
   document.querySelector('.modal-overlay').style.display = 'none';/*procure ".modal-overlay" em .style e procure a propriedade display e altere pra o seu valor paro o texto : "none"*/
   
   document.querySelector('#sabor').value = "";
@@ -120,7 +120,6 @@ async function createPaleta(){
     descricao,
     foto
   };
-
 
   const modoEdicaoAtivado = id>0;//retorna true/false-- testando se o id do bloco anterior é maior, se for é pq estou em update senao estou em cadastrar
 
@@ -147,7 +146,7 @@ async function createPaleta(){
           
           <div class="PaletaListaItem__acoes Acoes">
             <button class="Acoes__editar btn " onclick="abrirModal(${paleta.id})">Editar</button>
-            <button class="Acoes__apagar btn">Apagar</button>
+            <button class="Acoes__apagar btn" onclick="abrirModalDelete(${paleta.id})">Apagar</button>
           </div>
 
         </div>
@@ -164,16 +163,45 @@ async function createPaleta(){
       document.querySelector('#paletaList').insertAdjacentHTML('beforeend',html);
     }
 
-
-
     //zerando todos os valores do form depois de ter dado "submit"--update: agora que esta sendo feito no fecharModalcadastro, e toda vez que cadastramos algo ele ja fecha nao é necessário estar aqui
     /*document.querySelector('#sabor').value = "";
     document.querySelector('#preco').value = 0;
     document.querySelector('#descricao').value = "";
     document.querySelector('#foto').value = "";*/
 
-    fecharModalCadastro();
+    fecharModal();
 }
 
+function abrirModalDelete(id){
+  document.querySelector('#overlay-delete').style.display = 'flex';
 
+  const  btnSim = document.querySelector('.btn_delete_yes');
+
+  btnSim.addEventListener("click", function(){
+    deletePaleta(id)//quando o btnSim (de .btn_delete_yes ) ele recebe o id
+  })
+}
+
+function fecharModalDelete(){
+  document.querySelector('#overlay-delete').style.display = 'none';
+}
+
+async function deletePaleta(id){//async pois vai no back
+  const response = await fetch(`${baseUrl}/delete/${id}`,{
+    method:"delete",//metodo a depende do endpoint
+    headers:{
+      "Content-Type":"application/json",/*qual a forma de envio do conteudo (no caso via json)*/
+    },
+    mode:"cors",
+  });
+  
+  const result = await response.json();
+  alert(result.message);
+
+  document.getElementById('paletaList').innerHTML="";
+
+  fecharModalDelete();
+  findAllPaletas();
+
+}
 

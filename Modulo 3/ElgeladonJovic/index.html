@@ -46,7 +46,7 @@
           <div class="modal">
             <div class="modal-header">
               <h2 id="title-header-modal">Cadastrar nova Paleta</h2>
-              <a onclick="fecharModalCadastro()" class="close-modal">X</a>
+              <a onclick="fecharModal()" class="close-modal">X</a>
             </div>
 
             <div class="modal-body">
@@ -61,6 +61,27 @@
             </div>
 
           </div>
+        </section>
+
+
+        <section class="modal-overlay" id="overlay-delete">
+
+          <div class="modal">
+            <div class="modal-header">
+              <h2 id="title-header-modal">Confirmação de deleção</h2>
+              <a onclick="fecharModalDelete()" class="close-modal">X</a>
+            </div>
+
+            <div class="modal-body-delete">
+              <p>Deseja realmente apagar essa paleta?</p>
+              <div class="btns_delete">
+                <button class="btn_delete_no btn_delete" onclick="fecharModalDelete()">Não</button>
+                <button class="btn_delete_yes btn_delete" >Sim</button>
+              </div>
+            </div>
+
+          </div>
+
         </section>
 
         <!-- listagem de 1 paleta por ID -->
