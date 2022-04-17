@@ -80,7 +80,6 @@ html{
     width: 315px;
     display: flex;
     justify-content: space-around;
-
 }
 
 .PaletaCardItem{
@@ -354,4 +353,45 @@ html{
 .button-modal-create{
     display: flex;
     justify-content: flex-end;
+}
+
+.Acoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem ;
+}
+
+.btn{
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+    max-width: 280px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 48%;
+    transition: all 0.3s ease-in-out;
+}
+
+.Acoes__editar{
+    color: #0700d3;
+    border: solid 1px #0700d3;
+    background: transparent;
+}
+
+.Acoes__editar:hover{
+    color: #ffffff;
+    background-color: #0700d3;
+}
+
+.Acoes__apagar{
+    color: #ff0000;
+    border: solid 1px #ff0000;
+    background: transparent;
+}
+
+.Acoes__apagar:hover{
+    color: #ffffff;
+    background-color: #ff0000;
 }

@@ -18,8 +18,16 @@ async function findAllPaletas() {/*como é fora do front e pra nao ter problema 
               <div class="PaletaListaItem__sabor">${paleta.sabor}</div>
               <div class="PaletaListaItem__preco">R$${paleta.preco}</div>
               <div class="PaletaListaItem__descricao">${paleta.descricao}</div>
+
+              <div class="PaletaListaItem__acoes Acoes">
+                <button class="Acoes__editar btn">Editar</button>
+                <button class="Acoes__apagar btn">Apagar</button>
+              </div>
+
             </div>
             <img class="PaletaListaItem__foto" src=${paleta.foto} alt=${`Paleta de ${paleta.sabor}`} />
+
+            
 
         </div>
 
