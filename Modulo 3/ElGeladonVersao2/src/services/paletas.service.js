@@ -51,7 +51,30 @@ const paletas = [
     return paletas.find((paleta) => paleta.id == id);
   }
 
+const createPaletaService = (newPaleta) =>{
+    const newId = paletas.length +1;
+    newPaleta.id = newId;
+    paletas.push(newPaleta);
+    return newPaleta;
+}
+
+const updatePaletaService = (id,paletaEdited)=>{//recebendo do controller na parte de update
+    paletaEdited['id'] = id;//procurando o indice das paletas
+    const paletaIndex = paletas.findIndex((paleta)=>paleta.id == id);
+    paletas[paletaIndex] =  paletaEdited;//paleta alterada
+    return paletaEdited;
+}
+
+const deletePaletaService = (id) =>{
+    const paletaIndex = paletas.findIndex((paleta)=>paleta.id == id); //procurando o indice das paletas
+    paletas.splice(paletaIndex,1);
+
+}
+  
   module.exports = {
       findPaletaService,
-      findPaletaByIdService
+      findPaletaByIdService,
+      createPaletaService,
+      updatePaletaService,
+      deletePaletaService
   }
