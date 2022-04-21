@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors'); //cors serve para proteger o trafego de informacao entre front e back
 const routes = require('./src/routes/paleta.route')//'instalando o paleta.routes'
+const connectToDatabase = require('./src/database/database');
 
 const port = 3000;
 const app = express(); //chamando o framework
+
+connectToDatabase();
 
 app.use(express.json()); //configuracao para trabalhar com json
 app.use(cors()); //configuracao para trabalhar com cors para que aplicaco seja visivel pelo front

@@ -4,9 +4,17 @@ const cors = require('cors');
 const port = 3000;
 const app = express();
 
-const route = require('./src/routes/paletas.routes')
+const route = require('./src/routes/paletas.routes');
+
+const connectToDatabase = require('./src/database/database');
+
+
+
 // Configurando nossa aplicação para trabalhar com JSON's
 app.use(express.json());
+
+//conectando com mongodb
+connectToDatabase();
 
 // Configurando o CORS para que nossa aplicação seja visivel pelo front
 app.use(cors());

@@ -348,7 +348,7 @@ html {
   }
   
 
-  /*parte 3 */
+  /*parte 3 - Editar e Apagar */
   .Acoes{
     display: flex;
     justify-content: space-around;
