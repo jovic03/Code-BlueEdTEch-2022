@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const paletasService = require('../services/paletas.service');
 
 const findPaletasController = async (req, res)=>{
@@ -5,14 +6,19 @@ const findPaletasController = async (req, res)=>{
     res.send(allPaletas);//envia a req
 }
 
-const findPaletaByIdController = (req,res)=>{
+const findPaletaByIdController = async (req,res)=>{
     const idParam = req.params.id;//params é funcao do req
 
-    if(!idParam){
-        return res.status(400).send({message:'Paleta não encontrada'})
+    if(!mongoose.Types.ObjectId.isValid(idParam)){//types vem do mongo
+        res.status(400).send({message:'ID Invalido'});//se nao for valido senda essa mensagem
     }
 
-    const chosenPaleta = paletasService.findPaletaByIdService(idParam);//aqui retorna a paletas escolhida
+    const chosenPaleta = await paletasService.findPaletaByIdService(idParam);//aqui retorna a paletas escolhida
+
+    if(!chosenPaleta){
+        return res.status(400).send({message:'Paleta não encontrada'})
+     }
+
     res.send(chosenPaleta);
 }
 

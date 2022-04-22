@@ -51,8 +51,10 @@ const Paleta = require('../models/Paleta')
       return paletas;
   }
 
-  const findPaletaByIdService = (id) =>{//compara se tem esse id no service (parte acima)
-    return paletas.find((paleta) => paleta.id == id);
+  const findPaletaByIdService = async (id) =>{//compara se tem esse id no service (parte acima)
+    //return paletas.find((paleta) => paleta.id == id);
+    const paleta = await Paleta.findById(id);//o id dentro do metodo é o que vai ser passado na const
+    return paleta;
   }
 
 const createPaletaService = (newPaleta) =>{
