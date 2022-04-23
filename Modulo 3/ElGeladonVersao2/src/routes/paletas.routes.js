@@ -10,7 +10,7 @@ const paletasController = require('../controllers/paletas.controller');
 router.get('/all-paletas',paletasController.findPaletasController);
 
 //rota para listar uma paleta por ID
-router.get('/one-paletas/:id',validId, paletasController.findPaletaByIdController);
+router.get('/one-paleta/:id',validId, paletasController.findPaletaByIdController);
 
 //rota para criar paleta--por ele receber json ele precisa do middleware
 router.post('/create-paleta',validObjectBody,paletasController.createPaletaController);

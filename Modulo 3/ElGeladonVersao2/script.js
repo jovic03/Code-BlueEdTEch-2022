@@ -2,7 +2,7 @@ const baseUrl = 'http://localhost:3000/paletas';
 
 // Pegar todas as paletas do backend
 async function findAllPaletas() {
-  const response = await fetch(`${baseUrl}/find-paletas`);
+  const response = await fetch(`${baseUrl}/all-paletas`);
   const paletas = await response.json();
 
   paletas.forEach((paleta) => {
@@ -42,7 +42,7 @@ findAllPaletas();
 const findByIdPaletas = async () => {
   const id = document.getElementById('idPaleta').value;
 
-  const response = await fetch(`${baseUrl}/find-paletas/${id}`);
+  const response = await fetch(`${baseUrl}/one-paleta/${id}`);
 
   const paleta = await response.json();
 
@@ -72,7 +72,7 @@ async function abrirModal(id = null){
     document.querySelector('#title-header-modal').innerHTML ='Atualizar uma Paleta';
     document.querySelector('#button-form-modal').innerHTML = 'Atualizar';
 
-    const response = await fetch(`${baseUrl}/find-paletas/${id}`);
+    const response = await fetch(`${baseUrl}/one-paleta/${id}`);
     const paleta = await response.json();
 
     document.querySelector("#sabor").value = paleta.sabor;
@@ -117,7 +117,7 @@ async function createPaleta(){//recebndo do html os valores:
 
   const modoEdicaoAtivada = id>0;
 
-  const endpoint = baseUrl + (modoEdicaoAtivada ? `/update/${id}`:'/create');
+  const endpoint = baseUrl + (modoEdicaoAtivada ? `/update-paleta/${id}`:'/create-paleta');
   
   const response = await fetch(endpoint,{
     method: modoEdicaoAtivada ? 'put': 'post',
@@ -174,7 +174,7 @@ function fecharModalDelete(){
 
 const deletePaleta = async (id)=>{
 
-  const response = await fetch(`${baseUrl}/delete/${id}`,{
+  const response = await fetch(`${baseUrl}/delete-paleta/${id}`,{
     method: 'delete',
     headers: {
       "Content-Type": "application/json",
