@@ -21,7 +21,7 @@
                 <span class="Logo__titulo"> El Geladon </span>
               </div>
     
-              <div class="Header__opcoes Opcoes">
+              <!-- <div class="Header__opcoes Opcoes">
                 <div class="Opcoes__sacola Sacola">
                   <img
                     src="assets/icons/sacola.svg"
@@ -30,7 +30,13 @@
                     alt="Sacola de compras"
                   />
                 </div>
-              </div>
+              </div> -->
+
+              <div class="search-space">
+                <input type="text" id="search-input" placeholder="Digite o ID da paleta" />
+                <button class="search-button" onclick="findByIdPaletas()"><i class="bi bi-search"></i></button>
+            </div>
+
             </div>
           </div>
       <!-- Listagem de uma paleta pelo seu ID -->
@@ -73,7 +79,7 @@
                         <textarea type="text" name="descricao" id="descricao" placeholder="Descrição da Paleta"
                             rows="5"></textarea>
                         <input type="text" name="foto" id="foto" placeholder="Link da Foto da Paleta">
-                        <button class="default-button" id="button-form-modal" onclick="createPaleta()">Cadastrar </button>
+                        <button class="default-button" id="button-form-modal" onclick="submitPaleta()">Cadastrar </button>
                     </div>
                 </div>
             </div>
@@ -92,12 +98,21 @@
                 <p>Deseja realmente apagar essa paleta?</p>
                 <div class="btns_delete">
                     <button class="btn_delete_no btn_delete" onclick="fecharModalDelete()">Não</button>
-                    <button class="btn_delete_yes btn_delete">Sim</button>
+                    <button class="btn_delete_yes btn_delete" id="button-delete" >Sim</button>
                 </div>
             </div>
         </div>
     </section>
       
+
+
+    <section class="options">
+      <span class="msg-alert"></span>
+      <div class="btns-list-cad">
+          <a href="/" class="default-button list-all">Listar todas as paletas</a>
+          <button type="button" class="default-button" onclick="showModal()">Cadastrar Paleta</button>
+      </div>
+    </section>
 
       <!-- Listagem de todas as paletas -->
       <h2>Paletas Disponíveis</h2>

@@ -1,5 +1,7 @@
 const baseUrl = 'http://localhost:3000/paletas';
 
+const msgAlert = document.querySelector(".msg-alert");
+
 // Pegar todas as paletas do backend
 async function findAllPaletas() {
   const response = await fetch(`${baseUrl}/all-paletas`);
@@ -42,9 +44,29 @@ findAllPaletas();
 const findByIdPaletas = async () => {
   const id = document.getElementById('idPaleta').value;
 
+  if(id == ''){//testo no front pra mostrar os erros
+    localStorage.setItem('message','Digite um ID para pesquisar');
+    localStorage.setItem("type", "danger");//
+
+    closeMessageAlert();
+    return;
+  }
+
+  //para aparecer só o card pesquisado:
+  document.querySelector(".list-all").style.display = "block";
+  document.querySelector(".PaletaLista").style.display = "none";
+
   const response = await fetch(`${baseUrl}/one-paleta/${id}`);
 
   const paleta = await response.json();
+
+  if (paleta.message != undefined) {//aqui eu testo se o que vem do middleware veio como undefined
+    localStorage.setItem("message", paleta.message);
+    localStorage.setItem("type", "danger");
+    showMessageAlert();
+    return;
+  }
+
 
   const paletaEscolhidaDiv = document.getElementById('paletaEscolhida');
 
@@ -99,7 +121,7 @@ function fecharModalCadastro(){
   limparModal();
 }
 
-async function createPaleta(){//recebndo do html os valores:
+async function submitPaleta(){//recebndo do html os valores:
   const id = document.querySelector("#id").value;
   const sabor = document.querySelector("#sabor").value;
   const preco = document.querySelector("#preco").value;
@@ -129,6 +151,25 @@ async function createPaleta(){//recebndo do html os valores:
   });
 
   const novaPaleta = await response.json();
+
+  if (novaPaleta.message != undefined) {//vendo a mensagem do middleware referente a linha acima
+    localStorage.setItem("message", novaPaleta.message);
+    localStorage.setItem("type", "danger");
+
+    showMessageAlert();
+    return;
+  }
+
+  if (modoEdicaoAtivada) {//lembrando que por ser dinamico (ele cria ou atualiza dependendo se o modoEdicaoAtivada esta ativo ou nao) precisamos de msg pra duas ocasioes num if
+    localStorage.setItem("message", "Paleta atualizada com sucesso");
+    localStorage.setItem("type", "success");
+  } else {
+    localStorage.setItem("message", "Paleta criada com sucesso");
+    localStorage.setItem("type", "success");
+  }
+
+  document.location.reload(true);//depois de trazer a msg ele vai atualizar a pagina ('tipo' f5) com o card atualizado
+
 
   const html = `
     <div class="PaletaListaItem" id="PaletaListaItem_${novaPaleta.id}>
@@ -161,7 +202,7 @@ async function createPaleta(){//recebndo do html os valores:
 
 function abrirModalDelete(id){
   document.querySelector('#overlay-delete').style.display = 'flex';
-  const btnSim = document.querySelector('.btn_delete_yes');
+  const btnSim = document.querySelector('#button-delete');//injetnado essa funcao no btn_yes no delete paleta
 
   btnSim.addEventListener('click', function(){
     deletePaleta(id);
@@ -183,10 +224,32 @@ const deletePaleta = async (id)=>{
   });
 
   const result = await response.json();
-  alert (result.message);
+  //alert (result.message);
+
+  localStorage.setItem("message", result.message);
+  localStorage.setItem("type", "success");
+
+  document.location.reload(true);//atualizando a pagina (f5)
 
   document.getElementById('paletaList').innerHTML='';
   findAllPaletas();
   fecharModalDelete();
 
 }
+
+function showMessageAlert() {
+  msgAlert.innerText = localStorage.getItem("message");//localStorage é do js (devtools>application>storage>localstorage)--estamos procurando uma variavel 'message'
+  msgAlert.classList.add(localStorage.getItem("type"));//classList tbm do js, no de cima estamos pegando a key e aqui pegando o tipo
+  
+  closeMessageAlert();//mostra o acima e depois fehca
+}
+
+function closeMessageAlert() {
+  setTimeout(function () {//seta um tempo pra mostrar a mensagem mas fechar
+    msgAlert.innerText = "";//vai limpar o spam (do showMessageAlert  )
+    msgAlert.classList.remove(localStorage.getItem("type"));
+    localStorage.clear();
+  }, 3000);//tempo em ms
+}
+
+//showMessageAlert(); //somente para teste
