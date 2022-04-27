@@ -1,5 +1,11 @@
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../../swagger.json');
+
 const express = require('express');
 const router = express.Router();//ajuda criar rotas dentro do arquivo
+
+router.use('/api-docs', swaggerUi.serve);
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 const {validId,
     validObjectBody} = require('../middlewares/paleta.middleware');
